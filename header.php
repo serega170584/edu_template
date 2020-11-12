@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="right-top-line">
-                                <?php $APPLICATION->IncludeComponent("bitrix:menu","top_menu",Array(
+                                <?php $APPLICATION->IncludeComponent("bitrix:menu","top",Array(
                                         "ROOT_MENU_TYPE" => "top",
                                         "MAX_LEVEL" => "1",
                                         "CHILD_MENU_TYPE" => "top",
