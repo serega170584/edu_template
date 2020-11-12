@@ -31,7 +31,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
-							<p><i class="material-icons">phone</i> <span>+01 2334 853</span></p>
+							<p><i class="material-icons">phone</i> <span>+7 962 981 51 63</span></p>
 							<p><i class="material-icons">email</i> <span>email@mycourse.com</span></p>
 						</div>
 						<div class="col-lg-6">
