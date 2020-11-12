@@ -2,7 +2,7 @@
 $aMenuLinks = [
     [
         "О ВУЗе",
-        "/about/",
+        "about/",
         array(),
         array(),
         ""
