@@ -16,7 +16,9 @@ if (!$arResult)
     return;
 ?>
 <ul class="top-menu">
-    <li><a href="#">О ВУЗе</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="blog.html">News</a></li>
+    <?php
+    array_walk($arResult, function ($item) {
+        printf('<li><a href="%s">%s</a></li>', $item['LINK'], $item['TEXT']);
+    });
+    ?>
 </ul>
