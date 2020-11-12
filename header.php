@@ -37,7 +37,7 @@
 					<div class="row">
 						<div class="col-lg-6">
 							<p><i class="material-icons">phone</i> <span>+7 962 981 51 63</span></p>
-							<p><i class="material-icons">email</i> <span>email@mycourse.com</span></p>
+							<p><i class="material-icons">email</i> <span>email@mycourse.com111</span></p>
 						</div>
 						<div class="col-lg-6">
 							<div class="right-top-line">
