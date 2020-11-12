@@ -11,10 +11,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-var_dump($arResult);
-die('asd');
 $this->setFrameMode(true);
-if (!$arResult["ALL_ITEMS"])
+if (!$arResult)
     return;
 ?>
 <ul class="top-menu">
