@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \CMain $APPLICATION
+ */
+?>
 <!doctype html>
 
 
@@ -36,11 +41,19 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="right-top-line">
-								<ul class="top-menu">
-									<li><a href="#">Purchase Now</a></li>
-									<li><a href="about.html">About</a></li>
-									<li><a href="blog.html">News</a></li>
-								</ul>
+                                <?php $APPLICATION->IncludeComponent("bitrix:menu","top",Array(
+                                        "ROOT_MENU_TYPE" => "top",
+                                        "MAX_LEVEL" => "1",
+                                        "CHILD_MENU_TYPE" => "top",
+                                        "USE_EXT" => "Y",
+                                        "DELAY" => "N",
+                                        "ALLOW_MULTI_SELECT" => "Y",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "MENU_CACHE_GET_VARS" => ""
+                                    )
+                                );?>
 								<button class="search-icon">
 									<i class="material-icons open-search">search</i> 
 									<i class="material-icons close-search">close</i>
