@@ -13,7 +13,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-die('asd');
 if (empty($arResult["ALL_ITEMS"]))
     return;
 ?>
