@@ -14,12 +14,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 if (!$arResult)
     return;
-var_dump($arResult);
 ?>
 <ul class="navbar-nav mr-auto">
     <?php
     array_walk($arResult, function ($item) {
-        printf('<li><a href="%s">%s</a></li>', $item['LINK'], $item['TEXT']);
+        $class = '';
+        if ($item['SELECTED']) {
+            $class = ' class="active"';
+        }
+        print '<li class="drop-link">';
+        printf('<a%s href="%s">%s</a>', $class, $item['LINK'], $item['TEXT']);
+        print '</li>';
     });
     ?>
 </ul>
