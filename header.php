@@ -85,6 +85,19 @@
 					</a>
 
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <?php $APPLICATION->IncludeComponent("bitrix:menu","main",Array(
+                                "ROOT_MENU_TYPE" => "main",
+                                "MAX_LEVEL" => "1",
+                                "CHILD_MENU_TYPE" => "main",
+                                "USE_EXT" => "Y",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "Y",
+                                "MENU_CACHE_TYPE" => "N",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => ""
+                            )
+                        );?>
 						<ul class="navbar-nav mr-auto">
 							<li class="drop-link">
 								<a class="active" href="index.html">О ВУЗе</a>
