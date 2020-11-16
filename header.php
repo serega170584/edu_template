@@ -58,10 +58,6 @@
 									<i class="material-icons open-search">search</i> 
 									<i class="material-icons close-search">close</i>
 								</button>
-								<button class="shop-icon">
-									<i class="material-icons">shopping_cart</i>
-									<span class="studiare-cart-number">0</span>
-								</button>
 							</div>
 						</div>
 					</div>
