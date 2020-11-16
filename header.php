@@ -87,7 +87,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <?php $APPLICATION->IncludeComponent("bitrix:menu","main",Array(
                                 "ROOT_MENU_TYPE" => "main",
-                                "MAX_LEVEL" => "1",
+                                "MAX_LEVEL" => "2",
                                 "CHILD_MENU_TYPE" => "main",
                                 "USE_EXT" => "Y",
                                 "DELAY" => "N",
