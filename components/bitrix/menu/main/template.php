@@ -17,6 +17,7 @@ if (!$arResult)
 ?>
 <ul class="navbar-nav mr-auto">
     <?php
+    var_dump($arResult);
     array_walk($arResult, function ($item) {
         $class = '';
         if ($item['SELECTED']) {
