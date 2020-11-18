@@ -50,7 +50,7 @@ $APPLICATION->SetTitle("Title");
 								data-splitin="none" 
 								data-splitout="none" 
 								data-responsive_offset="on" 
-								style="z-index: 6; min-width: 370px; max-width: 450px; white-space: normal;text-align:left;">Self-Paced Learning Courses Online
+								style="z-index: 6; min-width: 370px; max-width: 450px; white-space: normal;text-align:left;">Self-Paced Learning111 Courses Online
 							</div>
 
 							<!-- LAYER NR. 3 -->
