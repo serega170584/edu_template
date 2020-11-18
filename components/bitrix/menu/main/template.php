@@ -17,15 +17,33 @@ if (!$arResult)
 ?>
 <ul class="navbar-nav mr-auto">
     <?php
+    $previousLevel = 0;
     var_dump($arResult);
-    array_walk($arResult, function ($item) {
+    die('asd');
+    array_walk($arResult, function ($item) use (&$previousLevel) {
+        if ($previousLevel) {
+            print '</li>';
+        }
+        if ($previousLevel > $item['DEPTH_LEVEL']) {
+            print '</ul></li>';
+        }
         $class = '';
         if ($item['SELECTED']) {
             $class = ' class="active"';
         }
-        print '<li class="drop-link">';
+        $liClass = '';
+        if ($item['DEPTH_LEVEL'] == 1) {
+            $liClass = '  class="drop-link"';
+        }
+        printf('<li%s>', $liClass);
         printf('<a%s href="%s">%s</a>', $class, $item['LINK'], $item['TEXT']);
-        print '</li>';
+        if ($previousLevel && $previousLevel < $item['DEPTH_LEVEL']) {
+            print '<ul class="dropdown">';
+        }
+        $previousLevel = $item['DEPTH_LEVEL'];
     });
+    if ($previousLevel == 2) {
+        print '</ul>';
+    }
     ?>
 </ul>
