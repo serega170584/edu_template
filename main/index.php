@@ -2,9 +2,8 @@
 /**
  * @var \CMain $APPLICATION
  */
-CModule::IncludeModule('main');
-CModule::IncludeModule('edu');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+CModule::IncludeModule('edu');
 $APPLICATION->SetTitle("Title");
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "list", array(
