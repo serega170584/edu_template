@@ -2,6 +2,7 @@
 /**
  * @var \CMain $APPLICATION
  */
+CModule::IncludeModule('main');
 CModule::IncludeModule('edu');
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Title");
