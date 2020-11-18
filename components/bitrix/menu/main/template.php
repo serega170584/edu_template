@@ -20,11 +20,11 @@ if (!$arResult)
     $previousLevel = 0;
     var_dump($arResult);
     array_walk($arResult, function ($item) use (&$previousLevel) {
-        if ($previousLevel) {
+        if ($previousLevel && $previousLevel == $item['DEPTH_LEVEL']) {
             print '</li>';
         }
         if ($previousLevel > $item['DEPTH_LEVEL']) {
-            print '</ul></li>';
+            print '</li></ul></li>';
         }
         $class = '';
         if ($item['SELECTED']) {
@@ -34,11 +34,11 @@ if (!$arResult)
         if ($item['DEPTH_LEVEL'] == 1) {
             $liClass = '  class="drop-link"';
         }
-        printf('<li%s>', $liClass);
-        printf('<a%s href="%s">%s</a>', $class, $item['LINK'], $item['TEXT']);
         if ($previousLevel && $previousLevel < $item['DEPTH_LEVEL']) {
             print '<ul class="dropdown">';
         }
+        printf('<li%s>', $liClass);
+        printf('<a%s href="%s">%s</a>', $class, $item['LINK'], $item['TEXT']);
         $previousLevel = $item['DEPTH_LEVEL'];
     });
     print '</li>';
