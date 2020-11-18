@@ -3,15 +3,17 @@
  * @var \CMain $APPLICATION
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-CModule::IncludeModule('edu');
 $APPLICATION->SetTitle("Title");
-var_dump(\Bitrix\Main\ModuleManager::getInstalledModules());
-die('asd');
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "list", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
-        "IBLOCK_TYPE" => Edu::ID,
-        "IBLOCK_ID" => Edu::getIblockId(Edu::ID, Edu::SLIDER_INFOBLOCK_CODE),
+        "IBLOCK_TYPE" => 'edu',
+        "IBLOCK_ID" => \CIBlock::GetList([
+            'ID' => 'ASC'
+        ], [
+            'TYPE' => 'edu',
+            'CODE' => 'SLIDER',
+        ])->Fetch()['ID'],
         "NEWS_COUNT" => "4",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
