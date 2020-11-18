@@ -420,7 +420,7 @@ $APPLICATION->SetTitle("Title");
                         data-easeout="default" data-masterspeed="default"
                         data-rotate="0" data-saveperformance="off" data-title="ideas" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="upload/slider/slider-image-41.jpg" alt="" data-bgposition="center center"
+                        <img src="upload/slider/slider-image-4.jpg" alt="" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
