@@ -5,6 +5,8 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('edu');
 $APPLICATION->SetTitle("Title");
+var_dump(\Bitrix\Main\ModuleManager::getInstalledModules());
+die('asd');
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "list", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
