@@ -270,14 +270,14 @@ $APPLICATION->SetTitle("Title");
 
 						</li>
 						<!-- SLIDE  -->
-						<li data-index="rs-674" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="upload/slider/slider-image-3.jpg" data-rotate="0" data-saveperformance="off" data-title="ideas" data-description="">
+						<li data-index="rs-15001" data-transition="fade" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="upload/slider/slider-image-3.jpg" data-rotate="0" data-saveperformance="off" data-title="ideas" data-description="">
 							<!-- MAIN IMAGE -->
 							<img src="upload/slider/slider-image-3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
 							<!-- LAYERS -->
 
 							<!-- LAYER NR. 1 -->
 							<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-								id="slide-674-layer-1" 
+								id="slide-15001-layer-1" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['0','0','0','0']" 
 								data-y="['top','top','top','top']" 
@@ -295,7 +295,7 @@ $APPLICATION->SetTitle("Title");
 
 							<!-- LAYER NR. 2 -->
 							<div class="tp-caption Woo-TitleLarge tp-resizeme" 
-								id="slide-674-layer-2" 
+								id="slide-15001-layer-2" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['40','40','40','35']" 
 								data-y="['top','top','top','top']" 
@@ -315,7 +315,7 @@ $APPLICATION->SetTitle("Title");
 
 							<!-- LAYER NR. 3 -->
 							<div class="tp-caption tp-shape tp-shapewrapper tp-line-shape tp-resizeme"
-								id="slide-674-layer-3" 
+								id="slide-15001-layer-3" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['0','0','0','0']" 
 								data-y="['top','top','top','top']" 
@@ -333,7 +333,7 @@ $APPLICATION->SetTitle("Title");
 
 							<!-- LAYER NR. 4 -->
 							<div class="tp-caption Woo-Rating tp-resizeme" 
-								id="slide-674-layer-4" 
+								id="slide-15001-layer-4" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['40','40','40','35']" 
 								data-y="['top','top','top','top']" 
@@ -354,7 +354,7 @@ $APPLICATION->SetTitle("Title");
 
 							<!-- LAYER NR. 5 -->
 							<div class="tp-caption tp-resizeme"
-								id="slide-674-layer-5" 
+								id="slide-15001-layer-5" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['407','407','407','407']" 
 								data-y="['top','top','top','top']" 
@@ -377,7 +377,7 @@ $APPLICATION->SetTitle("Title");
 							<a class="tp-caption Woo-ProductInfo rev-btn tp-resizeme" 
 								href="http://server.local/revslider/product/premium-computer-hardware/" 
 								target="_self" 
-								id="slide-674-layer-6" 
+								id="slide-15001-layer-6" 
 								data-x="['left','left','left','left']" 
 								data-hoffset="['40','40','40','35']" 
 								data-y="['top','top','top','top']" 
