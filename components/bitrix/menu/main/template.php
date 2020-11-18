@@ -18,7 +18,6 @@ if (!$arResult)
 <ul class="navbar-nav mr-auto">
     <?php
     $previousLevel = 0;
-    var_dump($arResult);
     array_walk($arResult, function ($item) use (&$previousLevel) {
         if ($previousLevel && $previousLevel == $item['DEPTH_LEVEL']) {
             print '</li>';
