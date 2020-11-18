@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Title");
                         data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off"
                         data-title="unique" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="upload/slider/slider-image-1.jpg" alt="" data-bgposition="center center"
+                        <img src="upload/slider/slider-image-1@2x.jpg" alt="" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
@@ -150,7 +150,7 @@ $APPLICATION->SetTitle("Title");
                         data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off"
                         data-title="ideas" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="upload/slider/slider-image-2.jpg" alt="" data-bgposition="center center"
+                        <img src="upload/slider/slider-image-2@2x.jpg" alt="" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
@@ -285,7 +285,7 @@ $APPLICATION->SetTitle("Title");
                         data-easeout="default" data-masterspeed="default" data-rotate="0" data-saveperformance="off"
                         data-title="ideas" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="upload/slider/slider-image-3.jpg" alt="" data-bgposition="center center"
+                        <img src="upload/slider/slider-image-3@2x.jpg" alt="" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
@@ -420,7 +420,7 @@ $APPLICATION->SetTitle("Title");
                         data-easeout="default" data-masterspeed="default"
                         data-rotate="0" data-saveperformance="off" data-title="ideas" data-description="">
                         <!-- MAIN IMAGE -->
-                        <img src="upload/slider/slider-image-4.jpg" alt="" data-bgposition="center center"
+                        <img src="upload/slider/slider-image-4@2x.jpg" alt="" data-bgposition="center center"
                              data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
