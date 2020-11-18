@@ -3,6 +3,7 @@
  * @var \CMain $APPLICATION
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Title");
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "list", array(
