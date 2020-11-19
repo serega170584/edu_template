@@ -47,6 +47,7 @@ $APPLICATION->SetTitle("Title");
                                     <li><a href="#">Документы и справки</a></li>
                                     <li><a href="#">Найти филиал ближе к дому</a></li>
                                 </ul>
+                                <a class="button-one" href="#">Подробнее</a>
                                 </p>
                             </div>
                         </div>
@@ -66,6 +67,7 @@ $APPLICATION->SetTitle("Title");
                                     <li><a href="#">Учебные материалы</a></li>
                                     <li><a href="#">Студенческая жизнь</a></li>
                                 </ul>
+                                <a class="button-one" href="#">Подробнее</a>
                                 </p>
                             </div>
                         </div>
@@ -85,6 +87,7 @@ $APPLICATION->SetTitle("Title");
                                     <li><a href="#">Совет молодых ученых</a></li>
                                     <li><a href="#">Ассоциация выпускников</a></li>
                                 </ul>
+                                <a class="button-one" href="#">Подробнее</a>
                                 </p>
                             </div>
                         </div>
