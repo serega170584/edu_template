@@ -11,8 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-die('asd');
-var_dump($arResult["ITEMS"]);
 ?>
 <!-- popular-courses-section
                 ================================================== -->
