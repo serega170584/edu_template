@@ -16,10 +16,6 @@ $APPLICATION->SetTitle("Новости");
                     "SITE_ID" => "s1"
                 )
             );?>
-            <ul class="page-depth">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="blog.html">Новости</a></li>
-            </ul>
         </div>
     </section>
     <!-- End page-banner-section -->

@@ -1,3 +1,3 @@
 <?
-$sSectionName="main";
+$sSectionName = "Главная";
 ?>
