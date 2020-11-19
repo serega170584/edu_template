@@ -39,9 +39,15 @@ $APPLICATION->SetTitle("Title");
                             </div>
                             <div class="feature-content">
                                 <h2>
-                                    Online Learn Courses Management
+                                    Абитуриентам
                                 </h2>
-                                <p>Analyzing negative materials about your brand and addressing them with sentiment analysis and press.</p>
+                                <p>
+                                <ul>
+                                    <li><a href="#">Приемная комиссия</a></li>
+                                    <li><a href="#">Документы и справки</a></li>
+                                    <li><a href="#">Найти филиал ближе к дому</a></li>
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -52,9 +58,15 @@ $APPLICATION->SetTitle("Title");
                             </div>
                             <div class="feature-content">
                                 <h2>
-                                    Learn from the masters of the field online
+                                    Студентам
                                 </h2>
-                                <p>Analyzing negative materials about your brand and addressing them with sentiment analysis and press.</p>
+                                <p>
+                                <ul>
+                                    <li><a href="#">Оплата обучения</a></li>
+                                    <li><a href="#">Учебные материалы</a></li>
+                                    <li><a href="#">Студенческая жизнь</a></li>
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -65,9 +77,15 @@ $APPLICATION->SetTitle("Title");
                             </div>
                             <div class="feature-content">
                                 <h2>
-                                    An Introduction-Skills For Learners
+                                    Выпускникам
                                 </h2>
-                                <p>Analyzing negative materials about your brand and addressing them with sentiment analysis and press.</p>
+                                <p>
+                                <ul>
+                                    <li><a href="#">Центр содействия занятости</a></li>
+                                    <li><a href="#">Совет молодых ученых</a></li>
+                                    <li><a href="#">Ассоциация выпускников</a></li>
+                                </ul>
+                                </p>
                             </div>
                         </div>
                     </div>
