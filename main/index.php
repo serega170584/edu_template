@@ -4,7 +4,7 @@
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
-$APPLICATION->SetTitle("Title");
+$APPLICATION->SetTitle("Сайт образовательной организации");
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "list", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
