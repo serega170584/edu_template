@@ -161,9 +161,9 @@ while ($row = $db->Fetch()) {
     }
 }
 global $arrFilter;
-$arrFilter = [
+$GLOBALS['PROPERTY_ENTITY'] = [
     'PROPERTY_ENTITY' => $highSchoolId
-]
+];
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
