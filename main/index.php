@@ -160,6 +160,7 @@ while ($row = $db->Fetch()) {
         $highSchoolId = $row['ID'];
     }
 }
+var_dump($highSchoolId);
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
