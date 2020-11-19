@@ -128,11 +128,10 @@ $APPLICATION->SetTitle("Title");
         <div class="container">
             <div class="title-section">
                 <div class="left-part">
-                    <span>Education</span>
-                    <h1>Popular Courses</h1>
+                    <h1>События</h1>
                 </div>
                 <div class="right-part">
-                    <a class="button-one" href="#">View All Courses</a>
+                    <a class="button-one" href="#">Все события</a>
                 </div>
             </div>
             <div class="popular-courses-box">
