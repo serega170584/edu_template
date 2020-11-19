@@ -178,7 +178,9 @@ var_dump($highSchoolId);
         "DISPLAY_TITLE" => "Новости",
         "DISPLAY_MORE_TITLE" => "Все новости",
         "FILTER_NAME" => [
-            'PROPERTY_ENTITY' => $highSchoolId
+            'PROPERTY' => [
+                'ENTITY' => $highSchoolId
+            ]
         ]
     )
 ); ?>
