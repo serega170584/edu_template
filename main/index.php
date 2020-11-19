@@ -97,4 +97,29 @@ $APPLICATION->SetTitle("Title");
         </div>
     </section>
     <!-- End feature section -->
+
+    <!-- about-section
+                ================================================== -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-article">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="upload/about/about1.jpg" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="article-content">
+                            <i class="fa fa-file-text-o"></i>
+                            <h2>Новый Государственный Университет</h2>
+                            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Он
+                                над имени парадигматическая журчит безорфографичный предложения, большого толку вопроса
+                                всеми возвращайся, его скатился силуэт пустился но вскоре дороге путь.</p>
+                            <a class="text-link" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End about section -->
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
