@@ -160,7 +160,10 @@ while ($row = $db->Fetch()) {
         $highSchoolId = $row['ID'];
     }
 }
-var_dump($highSchoolId);
+global $arrFilter;
+$arrFilter = [
+    'PROPERTY_ENTITY' => $highSchoolId
+]
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
@@ -177,11 +180,7 @@ var_dump($highSchoolId);
         "DISPLAY_BOTTOM_PAGER" => "",
         "DISPLAY_TITLE" => "Новости",
         "DISPLAY_MORE_TITLE" => "Все новости",
-        "FILTER_NAME" => [
-            'PROPERTY' => [
-                'ENTITY' => $highSchoolId
-            ]
-        ]
+        "FILTER_NAME" => 'PROPERTY_ENTITY'
     )
 ); ?>
 
