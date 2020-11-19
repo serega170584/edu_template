@@ -986,7 +986,7 @@ section.feature-section .feature-box .feature-post .feature-content p {
 
 section.feature-section .feature-box .feature-post .feature-content ul {
     list-style-type: none;
-    margin: 0 0 10px;
+    padding-left: 0;
 }
 
 /*------------------------------------------------- */
