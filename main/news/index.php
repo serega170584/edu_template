@@ -9,10 +9,10 @@ $APPLICATION->SetTitle("Новости");
                 ================================================== -->
     <section class="page-banner-section">
         <div class="container">
-            <h1>News</h1>
+            <h1>Новости</h1>
             <ul class="page-depth">
-                <li><a href="index.html">Studiare</a></li>
-                <li><a href="blog.html">News</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="blog.html">Новости</a></li>
             </ul>
         </div>
     </section>
