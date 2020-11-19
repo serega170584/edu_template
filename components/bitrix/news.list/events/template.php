@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$title = $arParams['DISPLAY_TITLE'] ?? 'События';
+$moreTitle = $arParams['DISPLAY_MORE_TITLE'] ?? 'Все события';
 ?>
 <!-- popular-courses-section
                 ================================================== -->
@@ -18,10 +20,10 @@ $this->setFrameMode(true);
     <div class="container">
         <div class="title-section">
             <div class="left-part">
-                <h1>События</h1>
+                <h1><?= $title ?></h1>
             </div>
             <div class="right-part">
-                <a class="button-one" href="#">Все события</a>
+                <a class="button-one" href="#"><?= $moreTitle ?></a>
             </div>
         </div>
         <div class="popular-courses-box">
