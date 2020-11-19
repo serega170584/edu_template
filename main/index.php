@@ -42,7 +42,7 @@ $APPLICATION->SetTitle("Title");
                                     Абитуриентам
                                 </h2>
                                 <p>
-                                <ul class="navbar-nav">
+                                <ul class="quick-list">
                                     <li><a href="#">Приемная комиссия</a></li>
                                     <li><a href="#">Документы и справки</a></li>
                                     <li><a href="#">Найти филиал ближе к дому</a></li>
