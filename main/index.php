@@ -154,8 +154,11 @@ $db = CIBlockPropertyEnum::GetList([
 ], [
     'IBLOCK_ID' => $iblockId
 ]);
+$highSchoolId = 0;
 while ($row = $db->Fetch()) {
-    var_dump($row);
+    if ($row['VALUE'] == 'ВУЗ') {
+        $highSchoolId = $row['ID'];
+    }
 }
 ?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
@@ -174,7 +177,7 @@ while ($row = $db->Fetch()) {
         "DISPLAY_TITLE" => "Новости",
         "DISPLAY_MORE_TITLE" => "Все новости",
         "FILTER_NAME" => [
-            'PROPERTY_ENTITY' => 1
+            'PROPERTY_ENTITY' => $highSchoolId
         ]
     )
 ); ?>
