@@ -121,16 +121,18 @@ $APPLICATION->SetTitle("Title");
         </div>
     </section>
     <!-- End about section -->
-
+<?php
+$iblockId = \CIBlock::GetList([
+    'ID' => 'ASC'
+], [
+    'TYPE' => 'edu',
+    'CODE' => 'NEWS',
+])->Fetch()['ID'];
+?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
         "IBLOCK_TYPE" => 'edu',
-        "IBLOCK_ID" => \CIBlock::GetList([
-            'ID' => 'ASC'
-        ], [
-            'TYPE' => 'edu',
-            'CODE' => 'NEWS',
-        ])->Fetch()['ID'],
+        "IBLOCK_ID" => $iblockId,
         "NEWS_COUNT" => "4",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
@@ -142,15 +144,24 @@ $APPLICATION->SetTitle("Title");
         "DISPLAY_BOTTOM_PAGER" => "",
     )
 ); ?>
+<?php
+/**
+ * @var \CDatabase $DB
+ */
+global $DB;
+$db = CIBlockPropertyEnum::GetList([
+    'ID' => 'ASC',
+], [
+    'IBLOCK_ID' => $iblockId
+]);
+while ($row = $db->Fetch()) {
+    var_dump($row);
+}
+?>
 <? $APPLICATION->IncludeComponent("bitrix:news.list", "events", array(
         "DISPLAY_PREVIEW_TEXT" => "Y",
         "IBLOCK_TYPE" => 'edu',
-        "IBLOCK_ID" => \CIBlock::GetList([
-            'ID' => 'ASC'
-        ], [
-            'TYPE' => 'edu',
-            'CODE' => 'NEWS',
-        ])->Fetch()['ID'],
+        "IBLOCK_ID" => $iblockId,
         "NEWS_COUNT" => "4",
         "SORT_BY1" => "ACTIVE_FROM",
         "SORT_ORDER1" => "DESC",
@@ -161,7 +172,10 @@ $APPLICATION->SetTitle("Title");
         "DISPLAY_TOP_PAGER" => "",
         "DISPLAY_BOTTOM_PAGER" => "",
         "DISPLAY_TITLE" => "Новости",
-        "DISPLAY_MORE_TITLE" => "Все новости"
+        "DISPLAY_MORE_TITLE" => "Все новости",
+        "FILTER_NAME" => [
+            'PROPERTY_ENTITY' => 1
+        ]
     )
 ); ?>
 
