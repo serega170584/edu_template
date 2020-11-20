@@ -46,6 +46,15 @@ $APPLICATION->SetTitle("Новости");
                 </div>
 
                 <div class="col-lg-8">
+                    <?php
+                    var_dump(\CIBlock::GetList([
+                        'ID' => 'ASC'
+                    ], [
+                        'TYPE' => 'edu',
+                        'CODE' => 'NEWS',
+                    ])->Fetch()['ID']);
+                    die('asd');
+                    ?>
                     <?php $APPLICATION->IncludeComponent("bitrix:news.detail", "", array(
                             "DISPLAY_DATE" => "Y",
                             "DISPLAY_NAME" => "Y",
