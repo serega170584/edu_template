@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+die('asd');
 ?>
 <div class="blog-box">
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
