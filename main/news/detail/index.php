@@ -58,7 +58,7 @@ $APPLICATION->SetTitle("Новости");
                                 'TYPE' => 'edu',
                                 'CODE' => 'NEWS',
                             ])->Fetch()['ID'],
-                            "ELEMENT_ID" => (int)$_REQUEST["ELEMENT_ID"],
+                            "ELEMENT_ID" => 1214,
                             "ELEMENT_CODE" => "",
                             "CHECK_DATES" => "Y",
                             "FIELD_CODE" => array("ID"),
