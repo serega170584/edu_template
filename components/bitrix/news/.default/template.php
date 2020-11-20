@@ -11,7 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-die('asd');
 ?>
 
 <?$APPLICATION->IncludeComponent(
