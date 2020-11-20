@@ -66,7 +66,6 @@ $APPLICATION->SetTitle("Новости");
                             "DISPLAY_BOTTOM_PAGER" => "",
                         )
                     ); ?>
-                    ; ?>
                 </div>
 
             </div>
