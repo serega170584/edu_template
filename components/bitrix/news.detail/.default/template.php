@@ -15,8 +15,8 @@ $this->setFrameMode(true);
 <div class="blog-box">
     <div class="blog-post single-post">
         <div class="post-content">
-            <h1><? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-                    <span class="news-date-time"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
+            <h1>    <? if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
+                    <?= $arResult["NAME"] ?>
                 <? endif; ?></h1>
             <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
                 <span class="post-meta date"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
