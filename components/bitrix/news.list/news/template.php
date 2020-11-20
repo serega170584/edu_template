@@ -25,11 +25,11 @@ $this->setFrameMode(true);
             <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img
                         class="preview_picture"
                         border="0"
-                        src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
+                        src="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>"
                         width="318"
                         height="227"
-                        alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
-                        title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"
+                        alt="<?= $arItem["DETAIL_PICTURE"]["ALT"] ?>"
+                        title="<?= $arItem["DETAIL_PICTURE"]["TITLE"] ?>"
                         style="float:left"
                 /></a>
             <div class="post-content">
