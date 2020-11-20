@@ -46,6 +46,9 @@ $APPLICATION->SetTitle("Новости");
                 </div>
 
                 <div class="col-lg-8">
+                    <?php
+                    die('asd');
+                    ?>
                     <?php $APPLICATION->IncludeComponent("bitrix:news.detail", "", array(
                             "DISPLAY_DATE" => "Y",
                             "DISPLAY_NAME" => "Y",
