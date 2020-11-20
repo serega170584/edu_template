@@ -26,6 +26,8 @@ $this->setFrameMode(true);
                         class="preview_picture"
                         border="0"
                         src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
+                        width="318"
+                        height="227"
                         alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
                         title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"
                         style="float:left"
