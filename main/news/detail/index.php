@@ -60,7 +60,6 @@ $APPLICATION->SetTitle("Новости");
                             ])->Fetch()['ID'],
                             "ELEMENT_ID" => 1214,
                             "ELEMENT_CODE" => "",
-                            "CHECK_DATES" => "Y",
                             "FIELD_CODE" => array("ID"),
                             "PROPERTY_CODE" => array("DESCRIPTION"),
                             "SET_TITLE" => "Y",
