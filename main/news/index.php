@@ -48,6 +48,7 @@ $APPLICATION->SetTitle("Новости");
                 <div class="col-lg-8">
                     <?php $APPLICATION->IncludeComponent("bitrix:news", "", array(
                             "DISPLAY_PREVIEW_TEXT" => "Y",
+                            "ELEMENT_ID" => (int)$_REQUEST['ID'],
                             "IBLOCK_TYPE" => 'edu',
                             "IBLOCK_ID" => \CIBlock::GetList([
                                 'ID' => 'ASC'
