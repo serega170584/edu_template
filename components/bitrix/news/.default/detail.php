@@ -24,7 +24,7 @@ $APPLICATION->IncludeComponent("bitrix:news.detail", "", array(
             'TYPE' => 'edu',
             'CODE' => 'NEWS',
         ])->Fetch()['ID'],
-        "ELEMENT_ID" => 23,
+        "ELEMENT_ID" => $arResult["VARIABLES"]["ELEMENT_ID"],
         "ELEMENT_CODE" => "",
         "FIELD_CODE" => array("ID"),
         "PROPERTY_CODE" => array("DESCRIPTION"),
