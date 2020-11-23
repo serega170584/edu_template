@@ -65,7 +65,10 @@ $APPLICATION->SetTitle("Новости");
                             "CACHE_TIME" => "3600",
                             "DISPLAY_TOP_PAGER" => "",
                             "DISPLAY_BOTTOM_PAGER" => "",
-                            "LIST_FIELD_CODE" => ["DETAIL_PICTURE"]
+                            "LIST_FIELD_CODE" => ["DETAIL_PICTURE"],
+                            "VARIABLE_ALIASES" => [
+                                "ELEMENT_ID" => "ID"
+                            ]
                         )
                     ); ?>
                 </div>
