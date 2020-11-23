@@ -30,7 +30,6 @@ $APPLICATION->SetTitle("Новости");
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="category-widget widget">
-                            <h2>Categories</h2>
                             <ul class="category-list">
                                 <li><a href="#">Academics</a></li>
                                 <li><a href="#">Advertisement</a></li>
