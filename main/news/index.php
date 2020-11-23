@@ -67,7 +67,8 @@ $APPLICATION->SetTitle("Новости");
                             "LIST_FIELD_CODE" => ["DETAIL_PICTURE"],
                             "VARIABLE_ALIASES" => [
                                 "ELEMENT_ID" => "ID"
-                            ]
+                            ],
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => ""
                         )
                     ); ?>
                 </div>
