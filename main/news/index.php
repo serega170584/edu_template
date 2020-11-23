@@ -30,16 +30,19 @@ $APPLICATION->SetTitle("Новости");
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="category-widget widget">
-                            <ul class="category-list">
-                                <li><a href="#">Academics</a></li>
-                                <li><a href="#">Advertisement</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Campus Life</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">Government</a></li>
-                                <li><a href="#">Schools</a></li>
-                                <li><a href="#">Uncategorized</a></li>
-                            </ul>
+                            <?php $APPLICATION->IncludeComponent("bitrix:menu","left",Array(
+                                    "ROOT_MENU_TYPE" => "left",
+                                    "MAX_LEVEL" => "2",
+                                    "CHILD_MENU_TYPE" => "left",
+                                    "USE_EXT" => "Y",
+                                    "DELAY" => "N",
+                                    "ALLOW_MULTI_SELECT" => "Y",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "MENU_CACHE_GET_VARS" => ""
+                                )
+                            );?>
                         </div>
                     </div>
                 </div>
