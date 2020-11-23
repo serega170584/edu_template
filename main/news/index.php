@@ -5,8 +5,6 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
-var_dump($_REQUEST['ID']);
-die('asd');
 ?>
     <!-- page-banner-section
                 ================================================== -->
