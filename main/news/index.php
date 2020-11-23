@@ -68,7 +68,7 @@ $APPLICATION->SetTitle("Новости");
                             "VARIABLE_ALIASES" => [
                                 "ELEMENT_ID" => "ID"
                             ],
-                            "INCLUDE_IBLOCK_INTO_CHAIN" => ""
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N"
                         )
                     ); ?>
                 </div>
