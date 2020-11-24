@@ -6,7 +6,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
 
-$list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchObject()->getLOGIN();
+$list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchObject()->getLogin();
 var_dump($list);
 die('asd');
 
