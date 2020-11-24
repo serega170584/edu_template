@@ -10,7 +10,7 @@ $list = \Bitrix\Main\UserTable::getByPrimary(1, [
     'select' => ['*', 'GROUPS']
 ])->fetchObject();
 foreach ($list->getGroups() as $item) {
-    var_dump($item->getName());
+    var_dump($item);
 }
 die('asd');
 
