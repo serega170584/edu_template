@@ -125,7 +125,6 @@ $order = 'ASC';
                         </p>
                         <p><b>Режим работы:</b> 9:00 до 20:00, Пн-Пт
                         </p>
-                        <h2>Информация о месте нахождения филиалов образовательной организации</h2>
                         <?php
                         $groupId = CGroup::GetList($by, $order, [
                             'STRING_ID' => 'BRANCHES'
@@ -136,6 +135,7 @@ $order = 'ASC';
                             ]
                         ]);
                         if ($db->SelectedRowsCount()) { ?>
+                            <h2>Информация о месте нахождения филиалов образовательной организации</h2>
                             <?php
                             while ($row = $db->NavNext(true, 'user')) {
                                 /**
