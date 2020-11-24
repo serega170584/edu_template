@@ -67,7 +67,11 @@ $order = 'ASC';
                         $groupId = CGroup::GetList($by, $order, [
                             'STRING_ID' => 'FOUNDERS'
                         ])->Fetch()['ID'];
-                        $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]]);
+                        $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
+                            'SELECT' => [
+                                'UF_SITE', 'UF_TIME_ADDITION'
+                            ]
+                        ]);
                         if ($db->SelectedRowsCount()) {
                             ?>
                             <table class="table table-striped">
