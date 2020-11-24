@@ -5,6 +5,13 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
+
+$list = \Bitrix\Main\UserTable::getList();
+foreach ($list as $item){
+    var_dump($item->getLogin());
+}
+die('asd');
+
 ?>
     <!-- page-banner-section
                 ================================================== -->
@@ -30,7 +37,7 @@ $APPLICATION->SetTitle("Новости");
                 <div class="col-lg-4">
                     <div class="sidebar">
                         <div class="category-widget widget">
-                            <?php $APPLICATION->IncludeComponent("bitrix:menu","left",Array(
+                            <?php $APPLICATION->IncludeComponent("bitrix:menu", "left", array(
                                     "ROOT_MENU_TYPE" => "left",
                                     "MAX_LEVEL" => "2",
                                     "CHILD_MENU_TYPE" => "left",
@@ -42,7 +49,7 @@ $APPLICATION->SetTitle("Новости");
                                     "MENU_CACHE_USE_GROUPS" => "Y",
                                     "MENU_CACHE_GET_VARS" => ""
                                 )
-                            );?>
+                            ); ?>
                         </div>
                     </div>
                 </div>
