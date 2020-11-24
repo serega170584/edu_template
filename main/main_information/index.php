@@ -147,6 +147,7 @@ $order = 'ASC';
                                  * @var $userUF_TIME_ADDITION
                                  */
                                 ?>
+                                <h3><?= $userNAME ?></h3>
                                 <p>
                                     <b>Адрес:</b> <?= $userPERSONAL_NOTES ?>
                                 </p>
