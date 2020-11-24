@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Новости");
 
 $list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchCollection();
 foreach ($list as $item) {
-    var_dump($item);
+    var_dump($item->getLogin());
 }
 die('asd');
 
