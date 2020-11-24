@@ -46,49 +46,71 @@ $order = 'ASC';
                                     "MENU_CACHE_GET_VARS" => ""
                                 )
                             ); ?>
-                            <div class="blog-box">
-                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8">
-                    <?php
-                    $groupId = CGroup::GetList($by, $order, [
-                        'STRING_ID' => 'FOUNDERS'
-                    ])->Fetch()['ID'];
-                    $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]]);
-                    while ($row = $db->Fetch()) {
-
-                    }
-                    ?>
-                    <?php $APPLICATION->IncludeComponent("bitrix:news", "", array(
-                            "DISPLAY_PREVIEW_TEXT" => "Y",
-                            "IBLOCK_TYPE" => 'edu',
-                            "IBLOCK_ID" => \CIBlock::GetList([
-                                'ID' => 'ASC'
-                            ], [
-                                'TYPE' => 'edu',
-                                'CODE' => 'NEWS',
-                            ])->Fetch()['ID'],
-                            "NEWS_COUNT" => "4",
-                            "SORT_BY1" => "ACTIVE_FROM",
-                            "SORT_ORDER1" => "DESC",
-                            "SORT_BY2" => "SORT",
-                            "SORT_ORDER2" => "ASC",
-                            "CACHE_TYPE" => "A",
-                            "CACHE_TIME" => "3600",
-                            "DISPLAY_TOP_PAGER" => "",
-                            "DISPLAY_BOTTOM_PAGER" => "",
-                            "LIST_FIELD_CODE" => ["DETAIL_PICTURE"],
-                            "VARIABLE_ALIASES" => [
-                                "ELEMENT_ID" => "ID"
-                            ],
-                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N"
-                        )
-                    ); ?>
+                    <div class="blog-box">
+                        <h1>Сведения об общеобразовательной организации</h1>
+                        <h2>Дата создания</h2>
+                        <p>Национальный исследовательский университет «Современный Государственный Университет» создан
+                            на основании решения Общего собрания учредителей от 17.07.1992 г. и зарегистрировано
+                            Постановлением главы Балашихинского района Московской области № 918/1-3 от 15.10.1993
+                            г. </p>
+                        <?php
+                        $groupId = CGroup::GetList($by, $order, [
+                            'STRING_ID' => 'FOUNDERS'
+                        ])->Fetch()['ID'];
+                        $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]]);
+                        if ($db->SelectedRowsCount()) {
+                            ?>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Учредители</th>
+                                    <th scope="col">Место нахождения</th>
+                                    <th scope="col">Адрес сайта</th>
+                                    <th scope="col">Адрес электронной почты</th>
+                                    <th scope="col">Справочный телефон</th>
+                                    <th scope="col">График работы</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                while ($row = $db->NavNext(true, 'user')) {
+                                    /**
+                                     * @var $userLAST_NAME
+                                     * @var $userNAME
+                                     * @var $userSECOND_NAME
+                                     * @var $userPERSONAL_NOTES
+                                     * @var $userUF_SITE
+                                     * @var $userPERSONAL_MAILBOX
+                                     * @var $userWORK_PHONE
+                                     * @var $userUF_TIME_ADDITION
+                                     */
+                                    ?>
+                                    <th scope="row"><?= $userLAST_NAME ?> <?= $userNAME ?> <?= $userSECOND_NAME ?></th>
+                                    <td><?= $userPERSONAL_NOTES ?></td>
+                                    <td><?= $userUF_SITE ?></td>
+                                    <td><?= $userPERSONAL_MAILBOX ?></td>
+                                    <td><?= $userWORK_PHONE ?></td>
+                                    <td><?= $userUF_TIME_ADDITION ?></td>
+                                    <?php
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                            <?php
+                        }
+                        ?>
+                        <h2>Учредители образовательной организации</h2>
+                        <p>
+                            Учредителем вуза является Российская Федерация. Функции и полномочия учредителя вуза
+                            осуществляет Министерство образования и науки РФ
+                        </p>
+                    </div>
                 </div>
-
             </div>
 
         </div>
