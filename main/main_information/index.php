@@ -4,13 +4,16 @@
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
-$APPLICATION->SetTitle("Новости");
+$APPLICATION->SetTitle("Сведения об общеобразовательной организации");
+
+$by = 'ID';
+$order = 'ASC';
 ?>
     <!-- page-banner-section
                 ================================================== -->
     <section class="page-banner-section">
         <div class="container">
-            <h1>Новости</h1>
+            <h1>Сведения об общеобразовательной организации</h1>
             <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
                     "START_FROM" => "0",
                     "PATH" => "",
@@ -43,11 +46,22 @@ $APPLICATION->SetTitle("Новости");
                                     "MENU_CACHE_GET_VARS" => ""
                                 )
                             ); ?>
+                            <div class="blog-box">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8">
+                    <?php
+                    $groupId = CGroup::GetList($by, $order, [
+                        'STRING_ID' => 'FOUNDERS'
+                    ])->Fetch()['ID'];
+                    $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]]);
+                    while ($row = $db->Fetch()) {
+
+                    }
+                    ?>
                     <?php $APPLICATION->IncludeComponent("bitrix:news", "", array(
                             "DISPLAY_PREVIEW_TEXT" => "Y",
                             "IBLOCK_TYPE" => 'edu',
