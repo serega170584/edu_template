@@ -6,9 +6,11 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
 
-$list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchCollection();
-foreach ($list as $item) {
-    var_dump($item->getLogin());
+$list = \Bitrix\Main\UserTable::getByPrimary(1, [
+    'select' => ['*', 'GROUPS']
+])->fetchObject();
+foreach ($list->getGroups() as $item) {
+    var_dump($item->getName());
 }
 die('asd');
 
