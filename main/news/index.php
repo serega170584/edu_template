@@ -6,8 +6,10 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
 
-$list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchObject()->getLogin();
-var_dump($list);
+$list = \Bitrix\Main\UserTable::getByPrimary(1)->fetchCollection();
+foreach ($list as $item) {
+    var_dump($item);
+}
 die('asd');
 
 ?>
