@@ -113,6 +113,53 @@ $order = 'ASC';
                             <?php
                         }
                         ?>
+                        <h2>Информация о месте нахождения образовательной организации</h2>
+                        <p>
+                            <b>Адрес:</b> 109544, Россия, г. Москва, бульвар Энтузиастов, дом 2
+                        </p>
+                        <p><b>Телефон:</b> +7 (495) 229-14-41
+                        </p>
+                        <p><b>E-mail:</b> info@1c-bitrix.ru
+                        </p>
+                        <p><b>Сайт:</b> 1c-bitrix.ru
+                        </p>
+                        <p><b>Режим работы:</b> 9:00 до 20:00, Пн-Пт
+                        </p>
+                        <h2>Информация о месте нахождения филиалов образовательной организации</h2>
+                        <?php
+                        $groupId = CGroup::GetList($by, $order, [
+                            'STRING_ID' => 'BRANCHES'
+                        ])->Fetch()['ID'];
+                        $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
+                            'SELECT' => [
+                                'UF_SITE', 'UF_TIME_ADDITION'
+                            ]
+                        ]);
+                        if ($db->SelectedRowsCount()) { ?>
+                            <?php
+                            while ($row = $db->NavNext(true, 'user')) {
+                                /**
+                                 * @var $userNAME
+                                 * @var $userPERSONAL_NOTES
+                                 * @var $userUF_SITE
+                                 * @var $userPERSONAL_MAILBOX
+                                 * @var $userWORK_PHONE
+                                 * @var $userUF_TIME_ADDITION
+                                 */
+                                ?>
+                                <p>
+                                    <b>Адрес:</b> <?= $userPERSONAL_NOTES ?>
+                                </p>
+                                <p><b>Телефон:</b> <?= $userWORK_PHONE ?>
+                                </p>
+                                <p><b>E-mail:</b> <?= $userPERSONAL_MAILBOX ?>
+                                </p>
+                                <p><b>Сайт:</b> <?= $userUF_SITE ?>
+                                </p>
+                                <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
+                                </p>
+                            <?php }
+                        } ?>
                     </div>
                 </div>
             </div>
