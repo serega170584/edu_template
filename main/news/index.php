@@ -7,7 +7,7 @@ CModule::IncludeModule('iblock');
 $APPLICATION->SetTitle("Новости");
 
 $list = \Bitrix\Main\UserTable::getByPrimary(1);
-var_dump($list->getLogin());
+var_dump($list);
 die('asd');
 
 ?>
