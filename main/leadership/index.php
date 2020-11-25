@@ -58,7 +58,7 @@ $order = 'ASC';
                         ])->Fetch()['ID'];
                         $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
                             'SELECT' => [
-                                'UF_SITE', 'UF_TIME_ADDITION'
+                                'UF_SITE', 'UF_TIME_ADDITION', 'UF_FILE'
                             ]
                         ]);
                         if ($db->SelectedRowsCount()) {
@@ -70,6 +70,7 @@ $order = 'ASC';
                                  * @var $userPERSONAL_MAILBOX
                                  * @var $userWORK_PHONE
                                  * @var $userUF_TIME_ADDITION
+                                 * @var $userUF_FILE
                                  */
                                 ?>
                                 <h2><?= $userNAME ?></h2>
@@ -83,6 +84,8 @@ $order = 'ASC';
                                 <p><b>Сайт:</b> <?= $userUF_SITE ?>
                                 </p>
                                 <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
+                                </p>
+                                <p><?php var_dump($userUF_FILE) ?>
                                 </p>
                             <?php }
 
