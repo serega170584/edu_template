@@ -4,7 +4,7 @@
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
-$APPLICATION->SetTitle("Сведения об общеобразовательной организации");
+$APPLICATION->SetTitle("Документы");
 
 $by = 'ID';
 $order = 'ASC';

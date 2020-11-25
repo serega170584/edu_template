@@ -4,7 +4,7 @@
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
-$APPLICATION->SetTitle("Сведения об общеобразовательной организации");
+$APPLICATION->SetTitle("Образование");
 
 $by = 'ID';
 $order = 'ASC';
@@ -53,8 +53,24 @@ $order = 'ASC';
                     <div class="blog-box">
                         <div class="blog-post">
                             <div class="post-content">
-                                <h1>Документы</h1>
-                                <?php $APPLICATION->IncludeComponent("bitrix:news.list", "documents", array(
+                                <h1>Образование</h1>
+                                <h2>Информация о реализуемых уровнях образования</h2>
+                                <p>Тег, обрамляющий сведения об реализуемых уровнях образования, должен содержать
+                                    специальный атрибут itemprop=«EduLevel»</p>
+                                <h2>Информация о формах обучения</h2>
+                                <p>
+                                    Тег, обрамляющий сведения о формах обучения, должен содержать специальный атрибут
+                                    itemprop=«EduForm»
+                                </p>
+                                <h2>Информация о нормативных сроках обучения</h2>
+                                <p>Тег, обрамляющий сведения о нормативных сроках обучения, должен содержать специальный
+                                    атрибут itemprop= «LearningTerm»</p>
+                                <h2>Информация о сроке действия государственной аккредитации образовательной программы
+                                    (при наличии государственной аккредитации)</h2>
+                                <p>Тег, обрамляющий сведения о сроке действия государственной аккредитации
+                                    образовательной программы, должен содержать специальный атрибут itemprop=
+                                    «DateEnd»</p>
+                                <?php $APPLICATION->IncludeComponent("bitrix:news.list", "professions", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
                                         "IBLOCK_TYPE" => 'edu',
                                         "IBLOCK_ID" => \CIBlock::GetList([
@@ -72,7 +88,31 @@ $order = 'ASC';
                                         "CACHE_TIME" => "3600",
                                         "DISPLAY_TOP_PAGER" => "",
                                         "DISPLAY_BOTTOM_PAGER" => "",
-                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N"
+                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                        "FIELD_CODE" => [
+                                            "PROPERTY_FORM_OF_EDUCATION",
+                                            "PROPERTY_PERIOD",
+                                            "PROPERTY_ACCREDITATION_PERIOD",
+                                            "PROPERTY_LEVEL",
+                                            "PROPERTY_CODE",
+                                            "PROPERTY_DESCRIPTION",
+                                            "PROPERTY_PLAN",
+                                            "PROPERTY_ANNOTATIONS",
+                                            "PROPERTY_SCHEDULE",
+                                            "PROPERTY_METHODOLOGICAL_DOCUMENTS",
+                                            "PROPERTY_PRACTICES",
+                                            "PROPERTY_BUDGET_COUNT",
+                                            "PROPERTY_PAYED_COUNT",
+                                            "PROPERTY_PRICE",
+                                            "PROPERTY_PREPARATORY_PROFILE",
+                                            "PROPERTY_PRINCIPAL_SUBJECTS",
+                                            "PROPERTY_LANGUAGES",
+                                            "PROPERTY_RESEARCHES",
+                                            "PROPERTY_RESULTS",
+                                            "PROPERTY_REPLACED_RESULTS",
+                                            "PROPERTY_FACULTY",
+                                            "PROPERTY_PRELIMINARY_TESTS"
+                                        ]
                                     )
                                 ); ?>
                             </div>
