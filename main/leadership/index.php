@@ -58,12 +58,11 @@ $order = 'ASC';
                         ])->Fetch()['ID'];
                         $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
                             'SELECT' => [
-                                'UF_SITE', 'UF_TIME_ADDITION', 'UF_FILE'
+                                'UF_SITE', 'UF_TIME_ADDITION', 'UF_DOCUMENT'
                             ]
                         ]);
                         if ($db->SelectedRowsCount()) {
                             while ($row = $db->NavNext(true, 'user')) {
-                                var_dump($row);
                                 /**
                                  * @var $userNAME
                                  * @var $userPERSONAL_NOTES
