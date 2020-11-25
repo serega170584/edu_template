@@ -11,15 +11,10 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-die('asd');
 if ($arResult["ITEMS"]) {
     ?>
     <ul>
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
-            <?php
-        var_dump($arItem);
-        die('asd');
-            ?>
             <li><a href="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>" target="_blank"><?= $arItem["NAME"] ?></a></li>
         <? endforeach; ?>
     </ul>
