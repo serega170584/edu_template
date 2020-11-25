@@ -70,7 +70,7 @@ $order = 'ASC';
                                  * @var $userPERSONAL_MAILBOX
                                  * @var $userWORK_PHONE
                                  * @var $userUF_TIME_ADDITION
-                                 * @var $userUF_FILE
+                                 * @var $userUF_DOCUMENT
                                  */
                                 ?>
                                 <h2><?= $userNAME ?></h2>
@@ -85,7 +85,7 @@ $order = 'ASC';
                                 </p>
                                 <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
                                 </p>
-                                <p><?php var_dump($userUF_FILE) ?>
+                                <p><?php var_dump($userUF_DOCUMENT) ?>
                                 </p>
                             <?php }
 
