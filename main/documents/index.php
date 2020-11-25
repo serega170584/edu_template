@@ -74,6 +74,7 @@ $order = 'ASC';
                                         "DISPLAY_TOP_PAGER" => "",
                                         "DISPLAY_BOTTOM_PAGER" => "",
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                        "FIELD_CODE" => ["DETAIL_PICTURE"]
                                     )
                                 ); ?>
                             </div>
