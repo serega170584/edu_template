@@ -56,6 +56,7 @@ $order = 'ASC';
                                 <h1>Документы</h1>
                                 <?php $APPLICATION->IncludeComponent("bitrix:news.list", "documents", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
+                                        "DISPLAY_PICTURE" => "Y",
                                         "IBLOCK_TYPE" => 'edu',
                                         "IBLOCK_ID" => \CIBlock::GetList([
                                             'ID' => 'ASC'
@@ -73,7 +74,6 @@ $order = 'ASC';
                                         "DISPLAY_TOP_PAGER" => "",
                                         "DISPLAY_BOTTOM_PAGER" => "",
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                                        "LIST_FIELD_CODE" => ["DETAIL_PICTURE"],
                                     )
                                 ); ?>
                             </div>
