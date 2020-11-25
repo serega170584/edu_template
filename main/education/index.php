@@ -77,7 +77,7 @@ $order = 'ASC';
                                             'ID' => 'ASC'
                                         ], [
                                             'TYPE' => 'edu',
-                                            'CODE' => 'DOCUMENTS',
+                                            'CODE' => 'PROFESSIONS',
                                         ])->Fetch()['ID'],
                                         "NEWS_COUNT" => "100",
                                         "SORT_BY1" => "ACTIVE_FROM",
