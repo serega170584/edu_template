@@ -51,52 +51,54 @@ $order = 'ASC';
 
                 <div class="col-lg-8">
                     <div class="blog-box">
-                        <h1>Структура и органы управления образовательной организацией</h1>
-                        <?php
-                        $groupId = CGroup::GetList($by, $order, [
-                            'STRING_ID' => 'DEPARTMENT'
-                        ])->Fetch()['ID'];
-                        $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
-                            'SELECT' => [
-                                'UF_SITE', 'UF_TIME_ADDITION', 'UF_DOCUMENT'
-                            ]
-                        ]);
-                        if ($db->SelectedRowsCount()) {
-                            while ($row = $db->NavNext(true, 'user')) {
-                                /**
-                                 * @var $userNAME
-                                 * @var $userPERSONAL_NOTES
-                                 * @var $userUF_SITE
-                                 * @var $userPERSONAL_MAILBOX
-                                 * @var $userWORK_PHONE
-                                 * @var $userUF_TIME_ADDITION
-                                 * @var $userUF_DOCUMENT
-                                 */
-                                ?>
-                                <h2><?= $userNAME ?></h2>
-                                <p>
-                                    <b>Адрес:</b> <?= $userPERSONAL_NOTES ?>
-                                </p>
-                                <p><b>Телефон:</b> <?= $userWORK_PHONE ?>
-                                </p>
-                                <p><b>E-mail:</b> <?= $userPERSONAL_MAILBOX ?>
-                                </p>
-                                <p><b>Сайт:</b> <?= $userUF_SITE ?>
-                                </p>
-                                <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
-                                </p>
-                                <?php
-                                if ($path = CFile::GetPath($userUF_DOCUMENT)) {
+                        <div class="blog-post">
+                            <h1>Структура и органы управления образовательной организацией</h1>
+                            <?php
+                            $groupId = CGroup::GetList($by, $order, [
+                                'STRING_ID' => 'DEPARTMENT'
+                            ])->Fetch()['ID'];
+                            $db = CUser::GetList($by, $order, ['GROUPS_ID' => [$groupId]], [
+                                'SELECT' => [
+                                    'UF_SITE', 'UF_TIME_ADDITION', 'UF_DOCUMENT'
+                                ]
+                            ]);
+                            if ($db->SelectedRowsCount()) {
+                                while ($row = $db->NavNext(true, 'user')) {
+                                    /**
+                                     * @var $userNAME
+                                     * @var $userPERSONAL_NOTES
+                                     * @var $userUF_SITE
+                                     * @var $userPERSONAL_MAILBOX
+                                     * @var $userWORK_PHONE
+                                     * @var $userUF_TIME_ADDITION
+                                     * @var $userUF_DOCUMENT
+                                     */
                                     ?>
-                                    <p><a href="<?= CFile::GetPath($userUF_DOCUMENT) ?>" target="_blank">Положение о
-                                            подразделении</a>
+                                    <h2><?= $userNAME ?></h2>
+                                    <p>
+                                        <b>Адрес:</b> <?= $userPERSONAL_NOTES ?>
+                                    </p>
+                                    <p><b>Телефон:</b> <?= $userWORK_PHONE ?>
+                                    </p>
+                                    <p><b>E-mail:</b> <?= $userPERSONAL_MAILBOX ?>
+                                    </p>
+                                    <p><b>Сайт:</b> <?= $userUF_SITE ?>
+                                    </p>
+                                    <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
                                     </p>
                                     <?php
+                                    if ($path = CFile::GetPath($userUF_DOCUMENT)) {
+                                        ?>
+                                        <p><a href="<?= CFile::GetPath($userUF_DOCUMENT) ?>" target="_blank">Положение о
+                                                подразделении</a>
+                                        </p>
+                                        <?php
+                                    }
                                 }
-                            }
 
-                        }
-                        ?>
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
