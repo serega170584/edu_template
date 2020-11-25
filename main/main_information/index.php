@@ -13,7 +13,6 @@ $order = 'ASC';
                 ================================================== -->
     <section class="page-banner-section">
         <div class="container">
-            <h1>Сведения об общеобразовательной организации</h1>
             <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "", array(
                     "START_FROM" => "0",
                     "PATH" => "",
