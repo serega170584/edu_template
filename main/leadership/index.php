@@ -63,6 +63,7 @@ $order = 'ASC';
                         ]);
                         if ($db->SelectedRowsCount()) {
                             while ($row = $db->NavNext(true, 'user')) {
+                                var_dump($row);
                                 /**
                                  * @var $userNAME
                                  * @var $userPERSONAL_NOTES
