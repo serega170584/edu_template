@@ -15,6 +15,10 @@ if ($arResult["ITEMS"]) {
     ?>
     <ul>
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
+            <?php
+        var_dump($arItem);
+        die('asd');
+            ?>
             <li><a href="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>" target="_blank"><?= $arItem["NAME"] ?></a></li>
         <? endforeach; ?>
     </ul>
