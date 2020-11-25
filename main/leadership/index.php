@@ -85,7 +85,7 @@ $order = 'ASC';
                                 </p>
                                 <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
                                 </p>
-                                <p><?php var_dump($userUF_DOCUMENT) ?>
+                                <p><?php var_dump(CFile::GetByID($userUF_DOCUMENT)->Fetch()) ?>
                                 </p>
                             <?php }
 
