@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+die('asd');
 if ($arResult["ITEMS"]) {
     ?>
     <ul>
