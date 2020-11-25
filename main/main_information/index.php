@@ -102,12 +102,14 @@ $order = 'ASC';
                                              * @var $userUF_TIME_ADDITION
                                              */
                                             ?>
-                                            <th scope="row"><?= $userLAST_NAME ?> <?= $userNAME ?> <?= $userSECOND_NAME ?></th>
-                                            <td><?= $userPERSONAL_NOTES ?></td>
-                                            <td><?= $userUF_SITE ?></td>
-                                            <td><?= $userPERSONAL_MAILBOX ?></td>
-                                            <td><?= $userWORK_PHONE ?></td>
-                                            <td><?= $userUF_TIME_ADDITION ?></td>
+                                            <tr>
+                                                <th scope="row"><?= $userLAST_NAME ?> <?= $userNAME ?> <?= $userSECOND_NAME ?></th>
+                                                <td><?= $userPERSONAL_NOTES ?></td>
+                                                <td><?= $userUF_SITE ?></td>
+                                                <td><?= $userPERSONAL_MAILBOX ?></td>
+                                                <td><?= $userWORK_PHONE ?></td>
+                                                <td><?= $userUF_TIME_ADDITION ?></td>
+                                            </tr>
                                             <?php
                                         }
                                         ?>

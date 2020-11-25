@@ -13,8 +13,77 @@
 $this->setFrameMode(true);
 ?>
 <? foreach ($arResult["ITEMS"] as $arItem): ?>
-    <?php
-    var_dump($arItem);
-    die('asd');
-    ?>
+    <h2><?= $arItem['NAME'] ?></h2>
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <th scope="row">Форма обучения</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Сроки обучения</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Срок действия гос. аккредитации</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Уровень образования</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Код специальности, направления подготовки</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Описание образовательной программы</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Учебный план</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Аннотации к рабочим программам дисциплин</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Календарный учебный график</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Методические и иные документы</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Практики</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Численность лиц, обучающихся за счет бюджета</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Численность лиц, находящихся на платном обучении</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Языки, на которых происходит обучение</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Научно-исследовательская работа</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Сведения о результатах приема</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        <tr>
+            <th scope="row">Результаты перевода и отчисления</th>
+            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+        </tr>
+        </tbody>
+    </table>
 <? endforeach; ?>
