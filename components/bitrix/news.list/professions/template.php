@@ -42,23 +42,24 @@ $this->setFrameMode(true);
         </tr>
         <tr>
             <th scope="row">Учебный план</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_PLAN_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_PLAN_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Аннотации к рабочим программам дисциплин</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_ANNOTATIONS_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_ANNOTATIONS_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Календарный учебный график</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_SCHEDULE_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_SCHEDULE_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Методические и иные документы</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_METHODOLOGICAL_DOCUMENTS_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_METHODOLOGICAL_DOCUMENTS_VALUE']) ?>" target="_blank">Ссылка</a>
+            </td>
         </tr>
         <tr>
             <th scope="row">Практики</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_PRACTICES_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_PRACTICES_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Численность лиц, обучающихся за счет бюджета</th>
@@ -74,15 +75,16 @@ $this->setFrameMode(true);
         </tr>
         <tr>
             <th scope="row">Научно-исследовательская работа</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_RESEARCHES_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_RESEARCHES_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Сведения о результатах приема</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_RESULTS_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_RESULTS_VALUE']) ?>" target="_blank">Ссылка</a></td>
         </tr>
         <tr>
             <th scope="row">Результаты перевода и отчисления</th>
-            <td><?= \CFile::GetPath($arItem['PROPERTY_REPLACED_RESULTS_VALUE']) ?></td>
+            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_REPLACED_RESULTS_VALUE']) ?>" target="_blank">Ссылка</a>
+            </td>
         </tr>
         </tbody>
     </table>
