@@ -42,23 +42,23 @@ $this->setFrameMode(true);
         </tr>
         <tr>
             <th scope="row">Учебный план</th>
-            <td><?= $arItem['PROPERTY_PLAN_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_PLAN_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Аннотации к рабочим программам дисциплин</th>
-            <td><?= $arItem['PROPERTY_ANNOTATIONS_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_ANNOTATIONS_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Календарный учебный график</th>
-            <td><?= $arItem['PROPERTY_SCHEDULE_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_SCHEDULE_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Методические и иные документы</th>
-            <td><?= $arItem['PROPERTY_METHODOLOGICAL_DOCUMENTS_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_METHODOLOGICAL_DOCUMENTS_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Практики</th>
-            <td><?= $arItem['PROPERTY_PRACTICES_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_PRACTICES_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Численность лиц, обучающихся за счет бюджета</th>
@@ -74,15 +74,15 @@ $this->setFrameMode(true);
         </tr>
         <tr>
             <th scope="row">Научно-исследовательская работа</th>
-            <td><?= $arItem['PROPERTY_RESEARCHES_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_RESEARCHES_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Сведения о результатах приема</th>
-            <td><?= $arItem['PROPERTY_RESULTS_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_RESULTS_VALUE']) ?></td>
         </tr>
         <tr>
             <th scope="row">Результаты перевода и отчисления</th>
-            <td><?= $arItem['PROPERTY_REPLACED_RESULTS_VALUE'] ?></td>
+            <td><?= \CFile::GetPath($arItem['PROPERTY_REPLACED_RESULTS_VALUE']) ?></td>
         </tr>
         </tbody>
     </table>
