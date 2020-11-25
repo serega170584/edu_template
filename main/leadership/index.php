@@ -85,9 +85,15 @@ $order = 'ASC';
                                 </p>
                                 <p><b>Режим работы:</b> <?= $userUF_TIME_ADDITION ?>
                                 </p>
-                                <p><?php var_dump(CFile::GetPath($userUF_DOCUMENT)) ?>
-                                </p>
-                            <?php }
+                                <?php
+                                if ($path = CFile::GetPath($userUF_DOCUMENT)) {
+                                    ?>
+                                    <p><a href="<?= CFile::GetPath($userUF_DOCUMENT) ?>" target="_blank">Положение о
+                                            подразделении</a>
+                                    </p>
+                                    <?php
+                                }
+                            }
 
                         }
                         ?>
