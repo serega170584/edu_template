@@ -64,8 +64,15 @@ $aMenuLinks = [
         ""
     ],
     [
-        "Стипендии и иные виды материальной поддержки",
-        "/local/templates/edu_template/main/education/",
+        "Платные образовательные услуги",
+        "/local/templates/edu_template/main/services/",
+        [],
+        [],
+        ""
+    ],
+    [
+        "Финансово-хозяйственная деятельность",
+        "/local/templates/edu_template/main/financialactivity/",
         [],
         [],
         ""
