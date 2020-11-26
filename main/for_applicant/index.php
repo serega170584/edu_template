@@ -80,7 +80,20 @@ $order = 'ASC';
                                             "PERIOD",
                                             "PRELIMINARY_TESTS",
                                             "BUDGET_COUNT",
-                                            "PAYED_COUNT"
+                                            "PAYED_COUNT",
+                                            "CODE",
+                                            "FORM_OF_EDUCATION",
+                                            "PRICE",
+                                            "PREPARATORY_PROFILE",
+                                            "PRINCIPAL_SUBJECTS",
+                                            "PLAN",
+                                            "ANNOTATIONS",
+                                            "SCHEDULE",
+                                            "METHODOLOGICAL_DOCUMENTS",
+                                            "PRACTICES",
+                                            "RESEARCHES",
+                                            "RESULTS",
+                                            "REPLACED_RESULTS"
                                         ],
                                     )
                                 ); ?>

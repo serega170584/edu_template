@@ -12,29 +12,44 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<div class="blog-box">
-    <div class="blog-post single-post">
-        <div class="post-content">
-            <h1>    <? if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
-                    <?= $arResult["NAME"] ?>
-                <? endif; ?></h1>
-            <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
-                <span class="post-meta date"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
-            <? endif; ?>
-        </div>
-        <a href="<?= $arResult["DETAIL_PAGE_URL"] ?>"><? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
-                <img
-                        src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-                        alt="<?= $arResult["DETAIL_PICTURE"]["ALT"] ?>"
-                        title="<?= $arResult["DETAIL_PICTURE"]["TITLE"] ?>"
-                />
-            <? endif ?></a>
-        <div class="post-content">
-            <? if ($arResult["DETAIL_TEXT"] <> ''): ?>
-                <? echo $arResult["DETAIL_TEXT"]; ?>
-            <? else: ?>
-                <? echo $arResult["PREVIEW_TEXT"]; ?>
-            <? endif ?>
-        </div>
-    </div>
-</div>
+<h1><?= $arResult["NAME"] ?></h1>
+<p><?= $arResult["PROPERTIES"]["CODE"]["VALUE"] ?></p>
+<?php
+var_dump($arResult);
+die('asd');
+?>
+<table class="table table-striped">
+    <thead>
+    <th scope="col">Программа</th>
+    <th scope="col">Обучение</th>
+    <th scope="col">Вступительные испытания</th>
+    <th scope="col">Количество мест</th>
+    </thead>
+    <tbody>
+    <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
+        <?= $arResult["NAV_STRING"] ?><br/>
+    <? endif; ?>
+    <? foreach ($arResult["ITEMS"] as $arItem): ?>
+        <?
+        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+        ?>
+        <tr>
+            <th scope="row">
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem['NAME'] ?></a>
+                <?= CIBlockElement::GetByID($arItem['PROPERTIES']['FACULTY']['VALUE'])->Fetch()['NAME'] ?>
+            </th>
+            <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
+            <td><?php array_map(function ($id) {
+                    printf('%s ', CIBlockElement::GetByID($id)->Fetch()['NAME']);
+                }, $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE']) ?></td>
+            <td><?= $arItem['PROPERTIES']['BUDGET_COUNT']['VALUE'] ?>
+                бюджетных/ <?= $arItem['PROPERTIES']['PAYED_COUNT']['VALUE'] ?> платных
+            </td>
+        </tr>
+    <? endforeach; ?>
+    <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+        <br/><?= $arResult["NAV_STRING"] ?>
+    <? endif; ?>
+    </tbody>
+</table>
