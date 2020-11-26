@@ -12,6 +12,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+var_dump($arResult["VARIABLES"]["ELEMENT_ID"]);
+die('asd');
 $APPLICATION->IncludeComponent("bitrix:news.detail", "", array(
         "DISPLAY_DATE" => "Y",
         "DISPLAY_NAME" => "Y",
