@@ -13,43 +13,46 @@
 $this->setFrameMode(true);
 ?>
 <h1><?= $arResult["NAME"] ?></h1>
-<p><?= $arResult["PROPERTIES"]["CODE"]["VALUE"] ?></p>
-<?php
-var_dump($arResult);
-die('asd');
-?>
+<p><?= $arResult["DETAIL_TEXT"] ?></p>
 <table class="table table-striped">
     <thead>
-    <th scope="col">Программа</th>
-    <th scope="col">Обучение</th>
-    <th scope="col">Вступительные испытания</th>
-    <th scope="col">Количество мест</th>
+    <th scope="col">Срок обучения: <?= $arResult['PROPERTIES']['PERIOD']['VALUE'] ?></th>
+    <th scope="col">Форма обучения: <?= $arResult['PROPERTIES']['FORM_OF_EDUCATION']['VALUE'] ?></th>
+    <th scope="col">Количество мест: <?= $arResult['PROPERTIES']['BUDGET_COUNT']['VALUE'] ?>
+        бюджетных, <?= $arResult['PROPERTIES']['PAYED_COUNT']['VALUE'] ?> платных
+    </th>
+    <th scope="col">Стоимость платных мест: <?= $arResult['PROPERTIES']['PRICE']['VALUE'] ?> </th>
     </thead>
     <tbody>
-    <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
-        <?= $arResult["NAV_STRING"] ?><br/>
-    <? endif; ?>
-    <? foreach ($arResult["ITEMS"] as $arItem): ?>
-        <?
-        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-        ?>
-        <tr>
-            <th scope="row">
-                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem['NAME'] ?></a>
-                <?= CIBlockElement::GetByID($arItem['PROPERTIES']['FACULTY']['VALUE'])->Fetch()['NAME'] ?>
-            </th>
-            <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
-            <td><?php array_map(function ($id) {
-                    printf('%s ', CIBlockElement::GetByID($id)->Fetch()['NAME']);
-                }, $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE']) ?></td>
-            <td><?= $arItem['PROPERTIES']['BUDGET_COUNT']['VALUE'] ?>
-                бюджетных/ <?= $arItem['PROPERTIES']['PAYED_COUNT']['VALUE'] ?> платных
-            </td>
-        </tr>
-    <? endforeach; ?>
-    <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-        <br/><?= $arResult["NAV_STRING"] ?>
-    <? endif; ?>
+    <tr>
+        <th scope="row">
+            Профили подготовки: <?= $arResult['PROPERTIES']['PREPARATORY_PROFILE']['VALUE'] ?>
+        </th>
+        <td>Ключевые дисциплины: <?= $arResult['PROPERTIES']['PRINCIPAL_SUBJECTS']['VALUE'] ?></td>
+        <td>Вступительные испытания: <?php array_map(function ($id) {
+                printf('%s ', CIBlockElement::GetByID($id)->Fetch()['NAME']);
+            }, $arResult['PROPERTIES']['PRELIMINARY_TESTS']['VALUE']) ?></td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <th scope="row" colspan="4">
+            <?php
+            $properties = [
+                "PLAN",
+                "ANNOTATIONS",
+                "SCHEDULE",
+                "METHODOLOGICAL_DOCUMENTS",
+                "PRACTICES",
+                "RESEARCHES",
+                "RESULTS",
+                "REPLACED_RESULTS"
+            ];
+            array_map(function ($code) use ($arResult) {
+                printf('<a href="%s">Ссылка</a><br>', CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]));
+            }, $properties);
+            ?>
+        </th>
+    </tr>
     </tbody>
 </table>
