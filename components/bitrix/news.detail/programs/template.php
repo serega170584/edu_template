@@ -49,8 +49,9 @@ $this->setFrameMode(true);
                 "REPLACED_RESULTS"
             ];
             array_map(function ($code) use ($arResult) {
-                printf('<a href="%s">Ссылка</a><br>', CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]));
+                printf('<a href="%s" target="_blank">Ссылка</a><br>', CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]));
             }, $properties);
+            CFile::Get
             ?>
         </th>
     </tr>
