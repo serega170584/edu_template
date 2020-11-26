@@ -16,7 +16,7 @@ $aMenuLinks = [
     ],
     [
         "Структура и органы управления образовательной организацией",
-        "/local/templates/edu_template/main/leadership/",
+        "/local/templates/edu_template/main/branches/",
         [],
         [],
         ""
