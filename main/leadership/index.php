@@ -65,9 +65,24 @@ $order = 'ASC';
                                         'UF_GENERAL_EXPERIENCE', 'UF_PROFESSION_EXPERIENCE'
                                     ]
                                 ]);
-                                while ($row = $db->Fetch()) {
-                                    var_dump($row);
-                                    die('asd');
+                                while ($row = $db->Fetch()) { ?>
+                                    <div class="list-style">
+                                        <img
+                                                class="preview_picture"
+                                                border="0"
+                                                src="<?= \CFile::GetPath($row['PERSONAL_PHOTO']) ?>"
+                                                width="318"
+                                                height="227"
+                                                style="float:left"
+                                        />
+                                        <div class="post-content">
+                                            <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
+                                            <p>
+                                                <?= $row['UF_POSITION'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <?php
                                 }
                                 ?>
                             </div>
