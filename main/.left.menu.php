@@ -76,6 +76,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Вакантные места для приема(перевода)",
+        "/local/templates/edu_template/main/vacancy/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
