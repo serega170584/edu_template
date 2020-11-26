@@ -34,6 +34,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Образовательные стандарты РФ",
+        "/local/templates/edu_template/main/educational_standards/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
