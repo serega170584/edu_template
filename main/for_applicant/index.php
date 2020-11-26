@@ -53,10 +53,6 @@ $order = 'ASC';
                     <div class="blog-box">
                         <div class="blog-post">
                             <div class="post-content">
-                                <h1>Абитуриенту</h1>
-                                <h2>Правила приёма, утверждённые организацией самостоятельно</h2>
-                                <a href="../images/license.pdf" target="_blank">Скачать правила приема</a>
-                                <h2>Правила приёма, утверждённые организацией самостоятельно</h2>
                                 <?php $APPLICATION->IncludeComponent("bitrix:news", "programs", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
                                         "IBLOCK_TYPE" => 'edu',

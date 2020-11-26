@@ -13,6 +13,11 @@
 $this->setFrameMode(true);
 if ($arResult["ITEMS"]) {
     ?>
+    <h1>Абитуриенту</h1>
+    <h2>Правила приёма, утверждённые организацией самостоятельно</h2>
+    <a href="../images/license.pdf" target="_blank">Скачать правила приема</a>
+    <h2>Правила приёма, утверждённые организацией самостоятельно</h2>
+
     <table class="table table-striped">
         <thead>
         <th scope="col">Программа</th>
