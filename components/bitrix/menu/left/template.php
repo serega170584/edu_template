@@ -17,8 +17,6 @@ if (!$arResult)
 ?>
 <ul class="category-list">
     <?php
-    var_dump($arResult);
-    die('asd');
     array_walk($arResult, function ($item) {
         printf('<li><a href="%s">%s</a></li>', $item['LINK'], $item['TEXT']);
     });
