@@ -26,20 +26,18 @@ if ($arResult["ITEMS"]) {
         <? endif; ?>
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
             <?
-        var_dump($arItem);
-        die('asd');
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
             <tr>
                 <th scope="row">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem['NAME'] ?></a>
-                    <?= $arItem['FIELDS']['PROPERTY_FACULTY_VALUE'] ?>
+                    <?= $arItem['PROPERTIES']['FACULTY']['VALUE'] ?>
                 </th>
-                <td><?= $arItem['FIELDS']['PROPERTY_PERIOD_VALUE'] ?></td>
-                <td><?= $arItem['FIELDS']['PROPERTY_PRELIMINARY_TESTS_VALUE'] ?></td>
-                <td><?= $arItem['FIELDS']['PROPERTY_BUDGET_COUNT_VALUE'] ?>
-                    бюджетных/ <?= $arItem['FIELDS']['PROPERTY_PAYED_COUNT_VALUE'] ?> платных
+                <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
+                <td><?= $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE'] ?></td>
+                <td><?= $arItem['PROPERTIES']['BUDGET_COUNT']['VALUE'] ?>
+                    бюджетных/ <?= $arItem['PROPERTIES']['PAYED_COUNT']['VALUE'] ?> платных
                 </td>
             </tr>
         <? endforeach; ?>
