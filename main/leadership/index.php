@@ -82,6 +82,8 @@ $order = 'ASC';
                                             <?= $row['UF_POSITION'] ?>
                                         </p>
                                     </div>
+                                    <div style="clear: both">
+                                    </div>
                                     <div>
                                         <table class="table table-striped">
                                             <tbody>
