@@ -32,7 +32,7 @@ if ($arResult["ITEMS"]) {
             <tr>
                 <th scope="row">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem['NAME'] ?></a>
-                    <?= $arItem['PROPERTIES']['FACULTY']['VALUE'] ?>
+                    <?= var_dump($arItem['PROPERTIES']['FACULTY']) ?>
                 </th>
                 <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
                 <td><?= $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE'] ?></td>
