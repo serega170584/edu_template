@@ -32,7 +32,7 @@ if ($arResult["ITEMS"]) {
             <tr>
                 <th scope="row">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem['NAME'] ?></a>
-                    <?= var_dump($arItem['PROPERTIES']['FACULTY']) ?>
+                    <?= CIBlockElement::GetByID($arItem['PROPERTIES']['FACULTY']['VALUE'])->Fetch()['NAME'] ?>
                 </th>
                 <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
                 <td><?= $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE'] ?></td>
