@@ -82,64 +82,62 @@ $order = 'ASC';
                                             <?= $row['UF_POSITION'] ?>
                                         </p>
                                     </div>
-                                    <div style="clear: both">
-                                    </div>
-                                    <div>
-                                        <table class="table table-striped">
-                                            <tbody>
-                                            <tr>
-                                                <th scope="row">E-mail</th>
-                                                <td><?= $row['PERSONAL_MAILBOX'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Должность</th>
-                                                <td><?= $row['UF_POSITION'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Сайт</th>
-                                                <td><?= $row['UF_SITE'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Телефон</th>
-                                                <td><?= $row['WORK_PHONE'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Преподаваемые дисциплины</th>
-                                                <td><?= $row['UF_SUBJECT'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Учёная степень</th>
-                                                <td><?= $row['UF_DEGREE'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Учёное звание</th>
-                                                <td><?= $row['UF_RANK'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Наименование направления подготовки и (или)
-                                                    специальности
-                                                </th>
-                                                <td><?= $row['UF_PROFESSION'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Данные о повышении квалификации и (или) профессиональной
-                                                    переподготовке
-                                                </th>
-                                                <td><?= $row['UF_ASSESSMENT'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Общий стаж работы
-                                                </th>
-                                                <td><?= $row['UF_GENERAL_EXPERIENCE'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Стаж работы по специальности
-                                                </th>
-                                                <td><?= $row['UF_PROFESSION_EXPERIENCE'] ?></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                </div>
+                                <div>
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">E-mail</th>
+                                            <td><?= $row['PERSONAL_MAILBOX'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Должность</th>
+                                            <td><?= $row['UF_POSITION'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Сайт</th>
+                                            <td><?= $row['UF_SITE'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Телефон</th>
+                                            <td><?= $row['WORK_PHONE'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Преподаваемые дисциплины</th>
+                                            <td><?= $row['UF_SUBJECT'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Учёная степень</th>
+                                            <td><?= $row['UF_DEGREE'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Учёное звание</th>
+                                            <td><?= $row['UF_RANK'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Наименование направления подготовки и (или)
+                                                специальности
+                                            </th>
+                                            <td><?= $row['UF_PROFESSION'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Данные о повышении квалификации и (или) профессиональной
+                                                переподготовке
+                                            </th>
+                                            <td><?= $row['UF_ASSESSMENT'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Общий стаж работы
+                                            </th>
+                                            <td><?= $row['UF_GENERAL_EXPERIENCE'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Стаж работы по специальности
+                                            </th>
+                                            <td><?= $row['UF_PROFESSION_EXPERIENCE'] ?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <?php
