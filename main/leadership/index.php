@@ -118,7 +118,7 @@ $order = 'ASC';
                                             <th scope="row">Наименование направления подготовки и (или)
                                                 специальности
                                             </th>
-                                            <td><?= $row['UF_PROFESSION'] ?></td>
+                                            <td><?= \CIBlockElement::GetByID($row['UF_PROFESSION'])['NAME'] ?></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">Данные о повышении квалификации и (или) профессиональной
