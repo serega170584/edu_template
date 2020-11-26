@@ -65,7 +65,10 @@ $order = 'ASC';
                                         'UF_GENERAL_EXPERIENCE', 'UF_PROFESSION_EXPERIENCE'
                                     ]
                                 ]);
-                                while ($row = $db->Fetch()) { ?>
+                                while ($row = $db->Fetch()) {
+                                    var_dump($row);
+                                    die('asd');
+                                    ?>
                                 <div class="blog-post list-style">
                                     <img
                                             class="preview_picture"
@@ -81,6 +84,14 @@ $order = 'ASC';
                                             <?= $row['UF_POSITION'] ?>
                                         </p>
                                     </div>
+                                    <table class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">E-mail</th>
+                                            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <?php
