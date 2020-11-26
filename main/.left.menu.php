@@ -71,6 +71,13 @@ $aMenuLinks = [
         ""
     ],
     [
+        "Платные образовательные услуги",
+        "/local/templates/edu_template/main/services/",
+        [],
+        [],
+        ""
+    ],
+    [
         "Финансово-хозяйственная деятельность",
         "/local/templates/edu_template/main/financial_activity/",
         [],
