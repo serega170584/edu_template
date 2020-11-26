@@ -75,12 +75,10 @@ $order = 'ASC';
                                             height="227"
                                             style="float:left; width:318px; height:227px"
                                     />
-                                    <div class="post-content">
-                                        <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
-                                        <p>
-                                            <?= $row['UF_POSITION'] ?>
-                                        </p>
-                                    </div>
+                                    <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
+                                    <p>
+                                        <?= $row['UF_POSITION'] ?>
+                                    </p>
                                 </div>
                             </div>
                             <?php
