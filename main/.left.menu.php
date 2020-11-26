@@ -83,6 +83,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Абитуриенту",
+        "/local/templates/edu_template/main/for_applicant/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>

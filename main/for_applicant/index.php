@@ -78,7 +78,14 @@ $order = 'ASC';
                                         "VARIABLE_ALIASES" => [
                                             "ELEMENT_ID" => "ID"
                                         ],
-                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N"
+                                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                        "LIST_PROPERTY_CODE" => [
+                                            "FACULTY",
+                                            "PERIOD",
+                                            "PRELIMINARY_TESTS",
+                                            "BUDGET_COUNT",
+                                            "PAYED_COUNT"
+                                        ],
                                     )
                                 ); ?>
                             </div>
