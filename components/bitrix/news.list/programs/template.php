@@ -35,7 +35,7 @@ if ($arResult["ITEMS"]) {
                     <?= CIBlockElement::GetByID($arItem['PROPERTIES']['FACULTY']['VALUE'])->Fetch()['NAME'] ?>
                 </th>
                 <td><?= $arItem['PROPERTIES']['PERIOD']['VALUE'] ?></td>
-                <td><?= $arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE'] ?></td>
+                <td><?php var_dump($arItem['PROPERTIES']['PRELIMINARY_TESTS']['VALUE']) ?></td>
                 <td><?= $arItem['PROPERTIES']['BUDGET_COUNT']['VALUE'] ?>
                     бюджетных/ <?= $arItem['PROPERTIES']['PAYED_COUNT']['VALUE'] ?> платных
                 </td>
