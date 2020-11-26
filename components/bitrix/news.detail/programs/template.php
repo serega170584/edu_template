@@ -54,12 +54,10 @@ $this->setFrameMode(true);
             $properties = [
                 "METHODOLOGICAL_DOCUMENTS",
             ];
-            array_map(function ($code) use ($arResult) {
-                var_dump($arResult["PROPERTIES"][$code]);
-                die('asd');
-                $path = CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]);
+            array_map(function ($code) {
+                $path = CFile::GetPath($code);
                 printf('<a href="%s" target="_blank">%s</a><br>', $path, basename($path));
-            }, $properties);
+            }, $arResult["PROPERTIES"]["METHODOLOGICAL_DOCUMENTS"]["VALUE"]);
             ?>
         </th>
     </tr>
