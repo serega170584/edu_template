@@ -13,6 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <h1><?= $arResult["NAME"] ?></h1>
+<p><?= $arResult["PROPERTIES"]["CODE"]["VALUE"] ?></p>
 <p><?= $arResult["DETAIL_TEXT"] ?></p>
 <table class="table table-striped">
     <thead>
