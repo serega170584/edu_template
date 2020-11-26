@@ -55,6 +55,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Стипендии и иные виды материальной поддержки",
+        "/local/templates/edu_template/main/grants/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
