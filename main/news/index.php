@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Новости");
                         <div class="category-widget widget">
                             <?php $APPLICATION->IncludeComponent("bitrix:menu", "left", array(
                                     "ROOT_MENU_TYPE" => "left",
-                                    "MAX_LEVEL" => "2",
+                                    "MAX_LEVEL" => "1",
                                     "CHILD_MENU_TYPE" => "left",
                                     "USE_EXT" => "Y",
                                     "DELAY" => "N",
