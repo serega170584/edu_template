@@ -42,13 +42,21 @@ $this->setFrameMode(true);
                 "PLAN",
                 "ANNOTATIONS",
                 "SCHEDULE",
-                "METHODOLOGICAL_DOCUMENTS",
                 "PRACTICES",
                 "RESEARCHES",
                 "RESULTS",
                 "REPLACED_RESULTS"
             ];
             array_map(function ($code) use ($arResult) {
+                $path = CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]);
+                printf('<a href="%s" target="_blank">%s</a><br>', $path, basename($path));
+            }, $properties);
+            $properties = [
+                "METHODOLOGICAL_DOCUMENTS",
+            ];
+            array_map(function ($code) use ($arResult) {
+                var_dump($arResult["PROPERTIES"][$code]);
+                die('asd');
                 $path = CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]);
                 printf('<a href="%s" target="_blank">%s</a><br>', $path, basename($path));
             }, $properties);
