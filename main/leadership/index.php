@@ -73,7 +73,7 @@ $order = 'ASC';
                                             src="<?= \CFile::GetPath($row['PERSONAL_PHOTO']) ?>"
                                             width="318"
                                             height="227"
-                                            style="float:left"
+                                            style="float:left; width:318px; height:227px"
                                     />
                                     <div class="post-content">
                                         <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
