@@ -52,7 +52,6 @@ $this->setFrameMode(true);
                 $path = CFile::GetPath($arResult["PROPERTIES"][$code]["VALUE"]);
                 printf('<a href="%s" target="_blank">%s</a><br>', $path, basename($path));
             }, $properties);
-            CFile::Get
             ?>
         </th>
     </tr>
