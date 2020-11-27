@@ -29,7 +29,7 @@ $aMenuLinks = [
         ""
     ],
     [
-        "Филиалы",
+        "Ученый совет",
         "/local/templates/edu_template/main/about/council/",
         [],
         [],
