@@ -2,7 +2,7 @@
 $aMenuLinks = [
     [
         "Новости",
-        "/local/templates/edu_template/main/news/",
+        "/local/templates/edu_template/main/about/news/",
         [],
         [],
         ""
