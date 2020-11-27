@@ -66,88 +66,87 @@ $order = 'ASC';
                                     ]
                                 ]);
                                 while ($row = $db->Fetch()) {
-                                ?>
-                                <div class="blog-post list-style">
-                                    <img
-                                            class="preview_picture"
-                                            border="0"
-                                            src="<?= \CFile::GetPath($row['PERSONAL_PHOTO']) ?>"
-                                            width="318"
-                                            height="227"
-                                            style="float:left; width:318px; height:227px"
-                                    />
-                                    <div class="post-content">
-                                        <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
-                                        <p>
-                                            <?= $row['UF_POSITION'] ?>
-                                        </p>
+                                    ?>
+                                    <div class="blog-post list-style">
+                                        <img
+                                                class="preview_picture"
+                                                border="0"
+                                                src="<?= \CFile::GetPath($row['PERSONAL_PHOTO']) ?>"
+                                                width="318"
+                                                height="227"
+                                                style="float:left; width:318px; height:227px"
+                                        />
+                                        <div class="post-content">
+                                            <h2><?= $row['LAST_NAME'] ?> <?= $row['NAME'] ?> <?= $row['SECOND_NAME'] ?></h2>
+                                            <p>
+                                                <?= $row['UF_POSITION'] ?>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <table class="table table-striped">
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">E-mail</th>
-                                            <td><?= $row['PERSONAL_MAILBOX'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Должность</th>
-                                            <td><?= $row['UF_POSITION'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Сайт</th>
-                                            <td><?= $row['UF_SITE'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Телефон</th>
-                                            <td><?= $row['WORK_PHONE'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Преподаваемые дисциплины</th>
-                                            <td><?= $row['UF_SUBJECT'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Учёная степень</th>
-                                            <td><?= $row['UF_DEGREE'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Учёное звание</th>
-                                            <td><?= $row['UF_RANK'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Наименование направления подготовки и (или)
-                                                специальности
-                                            </th>
-                                            <td><?= \CIBlockElement::GetByID($row['UF_PROFESSION'])->Fetch()['NAME'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Данные о повышении квалификации и (или) профессиональной
-                                                переподготовке
-                                            </th>
-                                            <td><?= $row['UF_ASSESSMENT'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Общий стаж работы
-                                            </th>
-                                            <td><?= $row['UF_GENERAL_EXPERIENCE'] ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Стаж работы по специальности
-                                            </th>
-                                            <td><?= $row['UF_PROFESSION_EXPERIENCE'] ?></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    <div>
+                                        <table class="table table-striped">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">E-mail</th>
+                                                <td><?= $row['PERSONAL_MAILBOX'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Должность</th>
+                                                <td><?= $row['UF_POSITION'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Сайт</th>
+                                                <td><?= $row['UF_SITE'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Телефон</th>
+                                                <td><?= $row['WORK_PHONE'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Преподаваемые дисциплины</th>
+                                                <td><?= $row['UF_SUBJECT'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Учёная степень</th>
+                                                <td><?= $row['UF_DEGREE'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Учёное звание</th>
+                                                <td><?= $row['UF_RANK'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Наименование направления подготовки и (или)
+                                                    специальности
+                                                </th>
+                                                <td><?= \CIBlockElement::GetByID($row['UF_PROFESSION'])->Fetch()['NAME'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Данные о повышении квалификации и (или) профессиональной
+                                                    переподготовке
+                                                </th>
+                                                <td><?= $row['UF_ASSESSMENT'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Общий стаж работы
+                                                </th>
+                                                <td><?= $row['UF_GENERAL_EXPERIENCE'] ?></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Стаж работы по специальности
+                                                </th>
+                                                <td><?= $row['UF_PROFESSION_EXPERIENCE'] ?></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <?php
+                                }
+                                ?>
                             </div>
-                            <?php
-                            }
-                            ?>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         </div>
     </section>
