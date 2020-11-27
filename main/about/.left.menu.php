@@ -27,7 +27,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Филиалы",
+        "/local/templates/edu_template/main/about/council/",
+        [],
+        [],
+        ""
     ]
-
 ];
 ?>
