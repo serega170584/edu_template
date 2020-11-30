@@ -53,7 +53,7 @@ $order = 'ASC';
                     <div class="blog-box">
                         <div class="blog-post">
                             <div class="post-content">
-                                <?php $APPLICATION->IncludeComponent("bitrix:news", "faculties", array(
+                                <?php $APPLICATION->IncludeComponent("bitrix:news", "structure", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
                                         "IBLOCK_TYPE" => 'edu',
                                         "IBLOCK_ID" => \CIBlock::GetList([
