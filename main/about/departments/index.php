@@ -60,7 +60,7 @@ $order = 'ASC';
                                             'ID' => 'ASC'
                                         ], [
                                             'TYPE' => 'edu',
-                                            'CODE' => 'FACULTIES',
+                                            'CODE' => 'DEPARTMENTS',
                                         ])->Fetch()['ID'],
                                         "NEWS_COUNT" => "4",
                                         "SORT_BY1" => "ACTIVE_FROM",
