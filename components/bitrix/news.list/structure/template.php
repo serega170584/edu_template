@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+global $arrFilter;
 ?>
 <h1>Структура</h1>
 <div class="blog-box">
@@ -28,6 +29,32 @@ $this->setFrameMode(true);
                 ?>
                 <li>
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem["NAME"] ?></a>
+                    <?php
+                    $GLOBALS['PROPERTY_FACULTY'] = [
+                        'PROPERTY_FACULTY' => $arItem["ID"]
+                    ];
+                    ?>
+                    <? $APPLICATION->IncludeComponent("bitrix:news.list", "departments", array(
+                            "DISPLAY_PREVIEW_TEXT" => "Y",
+                            "IBLOCK_TYPE" => 'edu',
+                            "IBLOCK_ID" => \CIBlock::GetList([
+                                'ID' => 'ASC'
+                            ], [
+                                'TYPE' => 'edu',
+                                'CODE' => 'DEPARTMENTS',
+                            ])->Fetch()['ID'],
+                            "SORT_BY1" => "ACTIVE_FROM",
+                            "SORT_ORDER1" => "DESC",
+                            "SORT_BY2" => "SORT",
+                            "SORT_ORDER2" => "ASC",
+                            "CACHE_TYPE" => "A",
+                            "CACHE_TIME" => "3600",
+                            "DISPLAY_TOP_PAGER" => "",
+                            "DISPLAY_BOTTOM_PAGER" => "",
+                            "FILTER_NAME" => 'PROPERTY_FACULTY'
+                        )
+                    ); ?>
+
                 </li>
             <? endforeach; ?>
         </ul>
