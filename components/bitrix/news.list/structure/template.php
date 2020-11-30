@@ -52,7 +52,7 @@ global $arrFilter;
                             "DISPLAY_TOP_PAGER" => "",
                             "DISPLAY_BOTTOM_PAGER" => "",
                             "FILTER_NAME" => 'PROPERTY_FACULTY',
-                            "DETAIL_URL" => '/local/templates/edu_template/main/about/departments/'
+                            "DETAIL_URL" => '/local/templates/edu_template/main/about/departments/?ID=#ELEMENT_ID#'
                         )
                     ); ?>
 
