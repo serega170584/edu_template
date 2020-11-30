@@ -69,6 +69,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Библиотека",
+        "/local/templates/edu_template/main/about/library/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
