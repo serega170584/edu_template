@@ -74,7 +74,6 @@ $order = 'ASC';
                                             "ELEMENT_ID" => "ID"
                                         ],
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                                        "DETAIL_URL" => '/local/templates/edu_template/main/about/faculties/?ID=#ELEMENT_ID#'
                                     )
                                 ); ?>
                             </div>
