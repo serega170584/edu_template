@@ -62,6 +62,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Устав",
+        "/local/templates/edu_template/main/about/constitution/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
