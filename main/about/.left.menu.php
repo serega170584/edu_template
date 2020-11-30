@@ -48,6 +48,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Преподаватели и сотрудники",
+        "/local/templates/edu_template/main/about/staff/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
