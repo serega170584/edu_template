@@ -1,3 +1,3 @@
 <?
-$sSectionName = "О ВУЗе";
+$sSectionName = "Абитуриенту";
 ?>
