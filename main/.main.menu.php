@@ -9,7 +9,7 @@ $aMenuLinks = [
     ],
     [
         "Абитуриенту",
-        "/local/templates/edu_template/for_applicant/admission_committee/",
+        "/local/templates/edu_template/main/for_applicant/admission_committee/",
         [],
         [],
         ""
