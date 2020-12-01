@@ -8,8 +8,8 @@ $aMenuLinks = [
         ""
     ],
     [
-        "О ВУЗе",
-        "/local/templates/edu_template/",
+        "Абитуриенту",
+        "/local/templates/edu_template/for_applicant/admission_committee/",
         [],
         [],
         ""
