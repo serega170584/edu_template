@@ -48,7 +48,7 @@ $APPLICATION->SetTitle("Объявления");
                 </div>
 
                 <div class="col-lg-8">
-                    <?php $APPLICATION->IncludeComponent("bitrix:news", "", array(
+                    <?php $APPLICATION->IncludeComponent("bitrix:news", "advertisement", array(
                             "DISPLAY_PREVIEW_TEXT" => "Y",
                             "IBLOCK_TYPE" => 'edu',
                             "IBLOCK_ID" => \CIBlock::GetList([
