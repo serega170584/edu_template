@@ -72,6 +72,7 @@ $APPLICATION->SetTitle("Объявления");
                                         "VARIABLE_ALIASES" => [
                                             "ELEMENT_ID" => "ID"
                                         ],
+                                        "LIST_FIELD_CODE" => ["DETAIL_PICTURE"],
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N"
                                     )
                                 ); ?>
