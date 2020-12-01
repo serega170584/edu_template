@@ -13,6 +13,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Специальности и направления",
+        "/local/templates/edu_template/main/for_applicant/education/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
