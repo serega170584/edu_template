@@ -78,8 +78,8 @@ $aMenuLinks = [
         ""
     ],
     [
-        "Библиотека",
-        "/local/templates/edu_template/main/about/library/",
+        "Объявления",
+        "/local/templates/edu_template/main/about/advertisement/",
         [],
         [],
         ""
