@@ -20,6 +20,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Стоимость обучения",
+        "/local/templates/edu_template/main/for_applicant/price_list/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
