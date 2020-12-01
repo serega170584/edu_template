@@ -83,6 +83,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Лицензии",
+        "/local/templates/edu_template/main/about/licenses/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
