@@ -2,10 +2,17 @@
 $aMenuLinks = [
     [
         "Приемная комиссия",
-        "/local/templates/edu_template/main/main_information/",
+        "/local/templates/edu_template/main/for_applicant/admission_committee/",
         [],
         [],
         ""
     ],
+    [
+        "Документы",
+        "/local/templates/edu_template/main/for_applicant/documents/",
+        [],
+        [],
+        ""
+    ]
 ];
 ?>
