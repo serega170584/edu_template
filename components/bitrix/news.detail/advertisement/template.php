@@ -12,5 +12,29 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<h1><?= $arResult["NAME"] ?></h1>
-<p><?= $arResult["DETAIL_TEXT"] ?></p>
+<div class="blog-box">
+    <div class="blog-post single-post">
+        <div class="post-content">
+            <h1>    <? if ($arParams["DISPLAY_NAME"] != "N" && $arResult["NAME"]): ?>
+                    <?= $arResult["NAME"] ?>
+                <? endif; ?></h1>
+            <? if ($arParams["DISPLAY_DATE"] != "N" && $arResult["DISPLAY_ACTIVE_FROM"]): ?>
+                <span class="post-meta date"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
+            <? endif; ?>
+        </div>
+        <a href="<?= $arResult["DETAIL_PAGE_URL"] ?>"><? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arResult["DETAIL_PICTURE"])): ?>
+                <img
+                        src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
+                        alt="<?= $arResult["DETAIL_PICTURE"]["ALT"] ?>"
+                        title="<?= $arResult["DETAIL_PICTURE"]["TITLE"] ?>"
+                />
+            <? endif ?></a>
+        <div class="post-content">
+            <? if ($arResult["DETAIL_TEXT"] <> ''): ?>
+                <? echo $arResult["DETAIL_TEXT"]; ?>
+            <? else: ?>
+                <? echo $arResult["PREVIEW_TEXT"]; ?>
+            <? endif ?>
+        </div>
+    </div>
+</div>

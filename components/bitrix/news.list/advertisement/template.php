@@ -12,20 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<h1>Факультеты</h1>
-<h2>Общая информация</h2>
-<p>В 1964 г. Московский государственный педагогический институт иностранных языков стал первым Московским
-    государственным педагогическим институтом иностранных языков. Ему также было присвоено имя видного политического
-    деятеля Франции – Мориса Тореза. В то время в составе Института было пять факультетов: факультеты английского,
-    немецкого, французского языка, переводческий факультет и факультет заочного обучения, выпускники которых, будь
-    то преподаватели иностранных языков или переводчики, отличались прекрасным владением двух иностранных языков. В
-    1964 г. Московский государственный педагогический институт иностранных языков.</p>
-<p>
-    отовку в области современной экономической теории, изучают обширный спектр дисциплин математического цикла,
-    современные технологии обработки информации, статистику, эконометрику. Фундаментальная подготовка,
-    бизнес-планирование, бухгалтерский учет, международные стандарты аудита и финансовой отчётности,
-    налогообложение, финансовый менеджмент, банковское и страховое дело и др.
-</p>
+<h1>Объявления</h1>
 <div class="blog-box">
     <?php
     if ($arResult["ITEMS"]) {
@@ -38,12 +25,28 @@ $this->setFrameMode(true);
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
-            <div class="mb-3">
-                <h2><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem["NAME"] ?></a></h2>
-                <p><? if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arItem["PREVIEW_TEXT"]): ?>
-                        <? echo $arItem["PREVIEW_TEXT"]; ?>
-                    <? endif; ?></p>
-                <a class="button-one" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Подробнее</a>
+            <div class="blog-post list-style">
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img
+                            class="preview_picture"
+                            border="0"
+                            src="<?= $arItem["DETAIL_PICTURE"]["SRC"] ?>"
+                            width="318"
+                            height="227"
+                            alt="<?= $arItem["DETAIL_PICTURE"]["ALT"] ?>"
+                            title="<?= $arItem["DETAIL_PICTURE"]["TITLE"] ?>"
+                            style="float:left"
+                    /></a>
+                <div class="post-content">
+                    <h2><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><?= $arItem["NAME"] ?></a></h2>
+                    <p><? if ($arParams["DISPLAY_PREVIEW_TEXT"] != "N" && $arItem["PREVIEW_TEXT"]): ?>
+                            <? echo $arItem["PREVIEW_TEXT"]; ?>
+                        <? endif; ?></p>
+                    <div class="post-meta date">
+                        <? if ($arParams["DISPLAY_DATE"] != "N" && $arItem["DISPLAY_ACTIVE_FROM"]): ?>
+                            <div class="post-meta date"><? echo $arItem["DISPLAY_ACTIVE_FROM"] ?></div>
+                        <? endif ?>
+                    </div>
+                </div>
             </div>
         <? endforeach; ?>
         <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
