@@ -13,26 +13,26 @@
 $this->setFrameMode(true);
 $counter = 0;
 ?>
-    <table class="table table-striped">
-    <thead>
-    <th scope="col">№ п/п</th>
-    <th scope="col">Шифр и наименование направления (специальности)</th>
-    <th scope="col"> Стоимость обучения за один год, тыс. руб.</th>
-    <th scope="col">Срок обучения, лет</th>
-    </thead>
-    <tbody>
 <?php
 if ($arResult["ITEMS"]) {
     ?>
-    <? foreach ($arResult["ITEMS"] as $arItem): ?>
-        <tr>
-            <th scope="row"><?= ++$counter; ?></th>
-            <td><?= $arItem['PROPERTY_CODE_VALUE'] ?> <?= $arItem['NAME'] ?></td>
-            <td><?= $arItem['PROPERTY_PRICE_VALUE'] ?></td>
-            <td><?= $arItem['PROPERTY_PERIOD_VALUE'] ?></td>
-        </tr>
-    <? endforeach; ?>
-    </tbody>
+    <table class="table table-striped">
+        <thead>
+        <th scope="col">№ п/п</th>
+        <th scope="col">Шифр и наименование направления (специальности)</th>
+        <th scope="col"> Стоимость обучения за один год, тыс. руб.</th>
+        <th scope="col">Срок обучения, лет</th>
+        </thead>
+        <tbody>
+        <? foreach ($arResult["ITEMS"] as $arItem): ?>
+            <tr>
+                <th scope="row"><?= ++$counter; ?></th>
+                <td><?= $arItem['PROPERTY_CODE_VALUE'] ?> <?= $arItem['NAME'] ?></td>
+                <td><?= $arItem['PROPERTY_PRICE_VALUE'] ?></td>
+                <td><?= $arItem['PROPERTY_PERIOD_VALUE'] ?></td>
+            </tr>
+        <? endforeach; ?>
+        </tbody>
     </table>
     <?php
 }

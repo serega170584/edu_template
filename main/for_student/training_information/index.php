@@ -54,14 +54,14 @@ $order = 'ASC';
                         <div class="blog-post">
                             <div class="post-content">
                                 <h1>Творческие коллективы</h1>
-                                <?php $APPLICATION->IncludeComponent("bitrix:news.list", "creatives", array(
+                                <?php $APPLICATION->IncludeComponent("bitrix:news.list", "training_information", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
                                         "IBLOCK_TYPE" => 'edu',
                                         "IBLOCK_ID" => \CIBlock::GetList([
                                             'ID' => 'ASC'
                                         ], [
                                             'TYPE' => 'edu',
-                                            'CODE' => 'CREATIVES',
+                                            'CODE' => 'TRAINING_MATERIALS',
                                         ])->Fetch()['ID'],
                                         "NEWS_COUNT" => "100",
                                         "SORT_BY1" => "ACTIVE_FROM",
@@ -74,10 +74,7 @@ $order = 'ASC';
                                         "DISPLAY_BOTTOM_PAGER" => "",
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                         "FIELD_CODE" => [
-                                            "PROPERTY_CREATIVE_LEADERSHIP",
-                                            "PROPERTY_TIMETABLE",
-                                            "PROPERTY_TIME",
-                                            "PROPERTY_PLACE"
+                                            "PROPERTY_FILE",
                                         ]
                                     )
                                 ); ?>

@@ -13,30 +13,30 @@
 $this->setFrameMode(true);
 $counter = 0;
 ?>
-    <table class="table table-striped">
-    <thead>
-    <th scope="col">№ п/п</th>
-    <th scope="col">Коллективы</th>
-    <th scope="col"> Руководители коллектива</th>
-    <th scope="col">Расписание</th>
-    <th scope="col">Время</th>
-    <th scope="col">Место</th>
-    </thead>
-    <tbody>
 <?php
 if ($arResult["ITEMS"]) {
     ?>
-    <? foreach ($arResult["ITEMS"] as $arItem): ?>
-        <tr>
-            <th scope="row"><?= ++$counter; ?></th>
-            <td><?= $arItem['NAME'] ?></td>
-            <td><?= $arItem['PROPERTY_CREATIVE_LEADERSHIP_VALUE'] ?></td>
-            <td><?= $arItem['PROPERTY_TIMETABLE_VALUE'] ?></td>
-            <td><?= $arItem['PROPERTY_TIME_VALUE'] ?></td>
-            <td><?= $arItem['PROPERTY_PLACE_VALUE'] ?></td>
-        </tr>
-    <? endforeach; ?>
-    </tbody>
+    <table class="table table-striped">
+        <thead>
+        <th scope="col">№ п/п</th>
+        <th scope="col">Коллективы</th>
+        <th scope="col"> Руководители коллектива</th>
+        <th scope="col">Расписание</th>
+        <th scope="col">Время</th>
+        <th scope="col">Место</th>
+        </thead>
+        <tbody>
+        <? foreach ($arResult["ITEMS"] as $arItem): ?>
+            <tr>
+                <th scope="row"><?= ++$counter; ?></th>
+                <td><?= $arItem['NAME'] ?></td>
+                <td><?= $arItem['PROPERTY_CREATIVE_LEADERSHIP_VALUE'] ?></td>
+                <td><?= $arItem['PROPERTY_TIMETABLE_VALUE'] ?></td>
+                <td><?= $arItem['PROPERTY_TIME_VALUE'] ?></td>
+                <td><?= $arItem['PROPERTY_PLACE_VALUE'] ?></td>
+            </tr>
+        <? endforeach; ?>
+        </tbody>
     </table>
     <?php
 }

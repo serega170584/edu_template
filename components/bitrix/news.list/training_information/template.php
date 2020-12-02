@@ -16,24 +16,14 @@ $counter = 0;
 <?php
 if ($arResult["ITEMS"]) {
     ?>
-    <table class="table table-striped">
-        <thead>
-        <th scope="col">№ п/п</th>
-        <th scope="col">Наименование</th>
-        <th scope="col"> Адрес</th>
-        <th scope="col">Телефон</th>
-        </thead>
-        <tbody>
+    <ul>
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
-            <tr>
-                <th scope="row"><?= ++$counter; ?></th>
-                <td><?= $arItem['NAME'] ?></td>
-                <td><?= $arItem['PROPERTY_ADDRESS_VALUE'] ?></td>
-                <td><?= $arItem['PREVIEW_TEXT'] ?></td>
-            </tr>
+            <li>
+                <a href="<?= CFile::GetPath($arItem['PROPERTY_FILE_VALUE']) ?>"
+                   target="_blank"><?= $arItem['NAME'] ?></a>
+            </li>
         <? endforeach; ?>
-        </tbody>
-    </table>
+    </ul>
     <?php
 }
 ?>
