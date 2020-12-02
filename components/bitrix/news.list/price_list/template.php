@@ -26,9 +26,9 @@ if ($arResult["ITEMS"]) {
     ?>
     <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <tr>
-            <th scope="row"><?= ++$counter; ?>></th>
+            <th scope="row"><?= ++$counter; ?></th>
             <td><?= $arItem['PROPERTY_CODE_VALUE'] ?> <?= $arItem['NAME'] ?></td>
-            <td><?= $arItem['PROPERTY_PRICE_CODE'] ?></td>
+            <td><?= $arItem['PROPERTY_PRICE_VALUE'] ?></td>
             <td><?= $arItem['PROPERTY_PERIOD_VALUE'] ?></td>
         </tr>
     <? endforeach; ?>
