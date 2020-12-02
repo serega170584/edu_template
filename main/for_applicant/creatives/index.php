@@ -74,7 +74,10 @@ $order = 'ASC';
                                         "DISPLAY_BOTTOM_PAGER" => "",
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                                         "FIELD_CODE" => [
-                                            "PROPERTY_ADDRESS"
+                                            "PROPERTY_CREATIVE_LEADERSHIP",
+                                            "PROPERTY_TIMETABLE",
+                                            "PROPERTY_TIME",
+                                            "PROPERTY_PLACE"
                                         ]
                                     )
                                 ); ?>
