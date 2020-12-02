@@ -11,81 +11,29 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$counter = 0;
 ?>
-<? foreach ($arResult["ITEMS"] as $arItem): ?>
-    <h2><?= $arItem['NAME'] ?></h2>
     <table class="table table-striped">
-        <tbody>
+    <thead>
+    <th scope="col">№ п/п</th>
+    <th scope="col">Шифр и наименование направления (специальности)</th>
+    <th scope="col"> Стоимость обучения за один год, тыс. руб.</th>
+    <th scope="col">Срок обучения, лет</th>
+    </thead>
+    <tbody>
+<?php
+if ($arResult["ITEMS"]) {
+    ?>
+    <? foreach ($arResult["ITEMS"] as $arItem): ?>
         <tr>
-            <th scope="row">Форма обучения</th>
-            <td><?= $arItem['PROPERTY_FORM_OF_EDUCATION_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Сроки обучения</th>
+            <th scope="row"><?= ++$counter; ?>></th>
+            <td><?= $arItem['PROPERTY_CODE_VALUE'] ?> <?= $arItem['NAME'] ?></td>
+            <td><?= $arItem['PROPERTY_PRICE_CODE'] ?></td>
             <td><?= $arItem['PROPERTY_PERIOD_VALUE'] ?></td>
         </tr>
-        <tr>
-            <th scope="row">Срок действия гос. аккредитации</th>
-            <td><?= $arItem['PROPERTY_ACCREDITATION_PERIOD_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Уровень образования</th>
-            <td><?= $arItem['PROPERTY_LEVEL_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Код специальности, направления подготовки</th>
-            <td><?= $arItem['PROPERTY_CODE_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Описание образовательной программы</th>
-            <td><?= $arItem['PROPERTY_DESCRIPTION_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Учебный план</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_PLAN_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Аннотации к рабочим программам дисциплин</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_ANNOTATIONS_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Календарный учебный график</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_SCHEDULE_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Методические и иные документы</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_METHODOLOGICAL_DOCUMENTS_VALUE']) ?>" target="_blank">Ссылка</a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">Практики</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_PRACTICES_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Численность лиц, обучающихся за счет бюджета</th>
-            <td><?= $arItem['PROPERTY_BUDGET_COUNT_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Численность лиц, находящихся на платном обучении</th>
-            <td><?= $arItem['PROPERTY_PAYED_COUNT_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Языки, на которых происходит обучение</th>
-            <td><?= $arItem['PROPERTY_LANGUAGES_VALUE'] ?></td>
-        </tr>
-        <tr>
-            <th scope="row">Научно-исследовательская работа</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_RESEARCHES_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Сведения о результатах приема</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_RESULTS_VALUE']) ?>" target="_blank">Ссылка</a></td>
-        </tr>
-        <tr>
-            <th scope="row">Результаты перевода и отчисления</th>
-            <td><a href="<?= \CFile::GetPath($arItem['PROPERTY_REPLACED_RESULTS_VALUE']) ?>" target="_blank">Ссылка</a>
-            </td>
-        </tr>
-        </tbody>
+    <? endforeach; ?>
+    </tbody>
     </table>
-<? endforeach; ?>
+    <?php
+}
+?>
