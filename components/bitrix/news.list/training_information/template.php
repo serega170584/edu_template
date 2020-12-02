@@ -16,7 +16,7 @@ $counter = 0;
 <?php
 if ($arResult["ITEMS"]) {
     ?>
-    <ul>
+    <ul style="list-style: none">
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
             <li>
                 <a href="<?= CFile::GetPath($arItem['PROPERTY_FILE_VALUE']) ?>"
