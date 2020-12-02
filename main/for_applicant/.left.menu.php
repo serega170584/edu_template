@@ -34,6 +34,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Правила приема",
+        "/local/templates/edu_template/main/for_applicant/rules/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
