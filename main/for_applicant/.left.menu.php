@@ -27,6 +27,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Подготовительные курсы",
+        "/local/templates/edu_template/main/for_applicant/prepared_courses/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
