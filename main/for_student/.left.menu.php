@@ -20,7 +20,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Творческие коллективы",
+        "/local/templates/edu_template/main/for_student/creatives/",
+        [],
+        [],
+        ""
     ]
-
 ];
 ?>
