@@ -4,7 +4,7 @@
  */
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 CModule::IncludeModule('iblock');
-$APPLICATION->SetTitle("Творческие коллективы");
+$APPLICATION->SetTitle("Учебные материалы");
 
 $by = 'ID';
 $order = 'ASC';
@@ -53,7 +53,7 @@ $order = 'ASC';
                     <div class="blog-box">
                         <div class="blog-post">
                             <div class="post-content">
-                                <h1>Творческие коллективы</h1>
+                                <h1>Учебные материалы</h1>
                                 <?php $APPLICATION->IncludeComponent("bitrix:news.list", "training_information", array(
                                         "DISPLAY_PREVIEW_TEXT" => "Y",
                                         "IBLOCK_TYPE" => 'edu',
