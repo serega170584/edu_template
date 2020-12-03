@@ -27,6 +27,13 @@ $aMenuLinks = [
         [],
         [],
         ""
-    ]
+    ],
+    [
+        "Спортивная жизнь",
+        "/local/templates/edu_template/main/for_student/sport_life/",
+        [],
+        [],
+        ""
+    ],
 ];
 ?>
