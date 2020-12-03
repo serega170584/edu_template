@@ -13,6 +13,14 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Документы",
+        "/local/templates/edu_template/main/for_student/documents/",
+        [],
+        [],
+        ""
     ]
+
 ];
 ?>
