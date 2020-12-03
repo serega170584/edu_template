@@ -13,6 +13,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Ассоциация выпускников",
+        "/local/templates/edu_template/main/for_graduates/council/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
