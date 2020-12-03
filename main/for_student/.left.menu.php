@@ -35,5 +35,12 @@ $aMenuLinks = [
         [],
         ""
     ],
+    [
+        "Международная деятельность",
+        "/local/templates/edu_template/main/for_student/international_activity/",
+        [],
+        [],
+        ""
+    ]
 ];
 ?>
