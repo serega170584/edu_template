@@ -41,6 +41,13 @@ $aMenuLinks = [
         [],
         [],
         ""
+    ],
+    [
+        "Иностранным студентам",
+        "/local/templates/edu_template/main/for_student/for_foreign_students/",
+        [],
+        [],
+        ""
     ]
 ];
 ?>
