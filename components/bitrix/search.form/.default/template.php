@@ -13,7 +13,7 @@
 ?>
 <form class="search_bar" action="<?= $arParams["PAGE"] ?>" method="get">
     <div class="container">
-        <input type="q" class="search-input" placeholder="What are you looking for...">
+        <input type="search" class="search-input" name="q" placeholder="What are you looking for...">
         <button type="submit" class="submit">
             <i class="material-icons">search</i>
         </button>
