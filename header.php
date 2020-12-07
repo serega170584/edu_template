@@ -65,7 +65,7 @@
 			</div>
             <?$APPLICATION->IncludeComponent("bitrix:search.form","",Array(
                     "USE_SUGGEST" => "N",
-                    "PAGE" => "#SITE_DIR#search/index.php"
+                    "PAGE" => "/local/templates/edu_template/main/search/index.php"
                 )
             );?>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
