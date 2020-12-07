@@ -63,16 +63,11 @@
 					</div>
 				</div>
 			</div>
-
-			<form class="search_bar">
-				<div class="container">
-					<input type="search" class="search-input" placeholder="What are you looking for...">
-					<button type="submit" class="submit">
-						<i class="material-icons">search</i>
-					</button>
-				</div>
-			</form>
-
+            <?$APPLICATION->IncludeComponent("bitrix:search.form","",Array(
+                    "USE_SUGGEST" => "N",
+                    "PAGE" => "#SITE_DIR#search/index.php"
+                )
+            );?>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="container">
 
