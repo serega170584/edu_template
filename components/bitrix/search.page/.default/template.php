@@ -10,6 +10,17 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-var_dump($arResult["SEARCH"]);
-die('asd');
 ?>
+<div class="blog-box">
+    <?php
+    foreach ($arResult['SEARCH'] as $arItem):
+        ?>
+        <div class="blog-post list-style">
+            <div class="post-content">
+                <h2><a href="<?= $arItem["URL"] ?>"><?= $arItem["TITLE"] ?></a></h2>
+            </div>
+        </div>
+    <?php
+    endforeach;
+    ?>
+</div>
